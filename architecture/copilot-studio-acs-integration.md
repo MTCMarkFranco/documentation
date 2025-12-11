@@ -181,6 +181,24 @@ sequenceDiagram
 3. Get Web Channel Security key (Security → Web Channel Security)
 4. Publish the agent
 
+#### Extracting the Web Channel Security Key
+
+The Web Channel Security key is required for your API to authenticate with Copilot Studio via Direct Line.
+
+**Steps to Extract:**
+1. Navigate to your Copilot Studio agent
+2. Click on **Settings** in the top navigation
+3. Select **Security** from the left-hand menu
+4. Click on **Web Channel Security**
+5. Copy the secret key displayed (it will be a long alphanumeric string)
+6. Store this key securely - you'll need it in your application configuration
+
+**Important Security Notes:**
+- Treat this key like a password - never commit it to source control
+- Use Azure Key Vault or environment variables to store it
+- Rotate the key periodically for security
+- If compromised, you can regenerate the key from the same location
+
 ### Application Requirements
 - Web service using Call Automation SDK
 - Public endpoint (e.g., using dev tunnels) to receive Event Grid notifications
@@ -206,6 +224,81 @@ sequenceDiagram
     "BaseUri": "https://your-api-domain.com",
     "WebSocketUri": "wss://your-api-domain.com"
   }
+}
+```
+
+### Configuring the Web Channel Security Key in Your Application
+
+**Option 1: appsettings.json (Development Only)**
+```json
+{
+  "CopilotStudio": {
+    "DirectLineSecret": "YOUR_WEB_CHANNEL_SECURITY_KEY_HERE"
+  }
+}
+```
+
+**Option 2: Environment Variables (Recommended)**
+```bash
+# Set environment variable
+COPILOT_DIRECTLINE_SECRET=YOUR_WEB_CHANNEL_SECURITY_KEY_HERE
+```
+
+**Option 3: Azure Key Vault (Production Recommended)**
+```csharp
+// In Program.cs or Startup.cs
+var keyVaultUrl = new Uri(configuration["KeyVault:Url"]);
+var credential = new DefaultAzureCredential();
+var secretClient = new SecretClient(keyVaultUrl, credential);
+
+KeyVaultSecret secret = await secretClient.GetSecretAsync("CopilotDirectLineSecret");
+var directLineSecret = secret.Value;
+```
+
+### Using the Key in Code
+
+```csharp
+// Retrieve from configuration
+var directLineSecret = configuration["CopilotStudio:DirectLineSecret"];
+// Or from environment variable
+// var directLineSecret = Environment.GetEnvironmentVariable("COPILOT_DIRECTLINE_SECRET");
+
+// Create HTTP client with authorization
+var httpClient = new HttpClient();
+httpClient.DefaultRequestHeaders.Authorization = 
+    new AuthenticationHeaderValue("Bearer", directLineSecret);
+
+// Start Direct Line conversation
+var response = await httpClient.PostAsync(
+    "https://directline.botframework.com/v3/directline/conversations", 
+    null
+);
+
+if (response.IsSuccessStatusCode)
+{
+    var content = await response.Content.ReadAsStringAsync();
+    var conversation = JsonConvert.DeserializeObject<DirectLineConversation>(content);
+    
+    // Use conversation.ConversationId and conversation.StreamUrl
+    var conversationId = conversation.ConversationId;
+    var streamUrl = conversation.StreamUrl; // WebSocket URL with embedded token
+}
+else
+{
+    // Handle authentication failure
+    logger.LogError($"Direct Line authentication failed: {response.StatusCode}");
+}
+```
+
+### Direct Line Conversation Response Model
+
+```csharp
+public class DirectLineConversation
+{
+    public string ConversationId { get; set; }
+    public string Token { get; set; }
+    public int ExpiresIn { get; set; }
+    public string StreamUrl { get; set; } // WebSocket URL
 }
 ```
 
