@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+package-lock.json
+
+# Build outputs
+*.pdf
+*.html
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store

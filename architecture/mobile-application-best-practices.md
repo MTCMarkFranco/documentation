@@ -1,9 +1,17 @@
-# Government of Canada — Secure Mobile Application Architecture Best Practices
+# Secure Mobile Application Architecture Best Practices
 
 **Classification:** Unclassified  
-**Version:** 1.0 — Draft  
+**Version:** 2.0 — Draft  
 **Date:** April 13, 2026  
-**Audience:** Enterprise Architects, Security Architects, Solution Architects, Development Leads, and Decision-Makers within GC Federal Departments  
+**Audience:** Enterprise Architects, Security Architects, Solution Architects, Development Leads, and Decision-Makers  
+
+> **IMPORTANT LEGAL NOTICE — GUIDANCE ONLY**
+>
+> This document is provided by Microsoft for **informational and advisory purposes only**. It does not constitute a certification, warranty, guarantee, or endorsement of any specific architecture, product, or approach. The recommendations herein represent general best-practice guidance based on publicly available industry standards and should not be construed as a mandate, directive, or binding obligation from Microsoft.
+>
+> **All architecture and security decisions remain the sole responsibility of the implementing organization** and should be validated against the organization's own policies, regulatory requirements, risk appetite, and legal obligations. Microsoft disclaims any liability arising from reliance on this guidance. Organizations should engage their own security, legal, and compliance advisors before making implementation decisions.
+>
+> This document does not replace or supersede any Government of Canada policy, directive, or standard. Where GC requirements are referenced, they are cited for contextual awareness only and should be independently verified by the reader.
 
 ---
 
@@ -18,7 +26,7 @@
    - 3.4 [Hybrid / WebView Shell Applications](#34-hybrid--webview-shell-applications)
    - 3.5 [Platform Comparison Matrix](#35-platform-comparison-matrix)
 4. [Authentication and Identity Architecture](#4-authentication-and-identity-architecture)
-   - 4.1 [GC Enterprise Identity Platform — Non-Negotiable Constraint](#41-gc-enterprise-identity-platform--non-negotiable-constraint)
+   - [4.1 Enterprise Identity Platform — Organizational Constraint](#41-enterprise-identity-platform--organizational-constraint)
    - 4.2 [OAuth 2.1 and Device-Bound Token Flows](#42-oauth-21-and-device-bound-token-flows)
    - 4.3 [OpenID Connect (OIDC) and Claims-Based Identity](#43-openid-connect-oidc-and-claims-based-identity)
    - 4.4 [Why MFA Alone Is Insufficient](#44-why-mfa-alone-is-insufficient)
@@ -43,30 +51,36 @@
    - 6.13 [Dependency and Supply-Chain Security](#613-dependency-and-supply-chain-security)
 7. [Security Controls Comparison — Native vs. React Native vs. WebView](#7-security-controls-comparison--native-vs-react-native-vs-webview)
 8. [Decision Tree — Selecting the Right Architecture](#8-decision-tree--selecting-the-right-architecture)
-9. [Recommendations and Next Steps](#9-recommendations-and-next-steps)
-10. [Appendix — Glossary and References](#10-appendix--glossary-and-references)
+9. [Security Incident Event (SIE) Response — Architecture for Rapid Containment](#9-security-incident-event-sie-response--architecture-for-rapid-containment)
+   - 9.1 [SIE Response Capabilities by Architecture](#91-sie-response-capabilities-by-architecture)
+   - 9.2 [Microsoft Technology Stack for SIE Response](#92-microsoft-technology-stack-for-sie-response)
+   - 9.3 [SIE Response Playbook — Recommended Pattern](#93-sie-response-playbook--recommended-pattern)
+   - 9.4 [Continuous Access Evaluation (CAE) — Critical SIE Enabler](#94-continuous-access-evaluation-cae--critical-sie-enabler)
+10. [Recommendations and Next Steps](#10-recommendations-and-next-steps)
+11. [Appendix — Glossary and References](#11-appendix--glossary-and-references)
 
 ---
 
 ## 1. Executive Summary
 
-This document provides a comprehensive guide for the Government of Canada (GC) when designing, building, and deploying secure mobile applications for Android phones/tablets and iOS devices (iPhone/iPad). It moves beyond the narrow view of "which framework to pick" and "which IdP to use" to address **every application-level cross-cutting concern** that is critical for a federal-grade mobile application.
+This document provides an advisory framework for organizations evaluating secure mobile application architectures for Android phones/tablets and iOS devices (iPhone/iPad). It presents a decision matrix covering cross-cutting concerns relevant to mobile applications that handle sensitive data, enabling informed architecture decisions based on each organization's unique risk profile and operational context.
 
-Key findings:
+Key observations:
 
 - **Platform selection is secondary to architecture decisions.** The choice between React Native, Swift, and Kotlin matters less than how authentication, logging, auditing, tracing, authorization, data protection, and testability are architected across the stack.
-- **The GC Identity Platform is a fixed constraint**, but there is significant design space in how device-level security, token flows, and credential storage are implemented around it.
-- **MFA alone is not sufficient** for high-assurance mobile use cases. Device attestation, hardware-bound keys, and mutual TLS provide defense-in-depth.
-- **WebView shell applications are a serious security risk** and should be avoided for any application handling Protected B or sensitive data.
-- **Native platforms offer measurably stronger security primitives** than cross-platform frameworks, but React Native is a viable option when paired with proper native module bridges for security-critical operations.
+- **Enterprise Identity Platforms are typically a fixed constraint**, but there is significant design space in how device-level security, token flows, and credential storage are implemented around them.
+- **MFA alone may not be sufficient** for high-assurance mobile use cases. Device attestation, hardware-bound keys, and mutual TLS can provide meaningful defense-in-depth.
+- **WebView shell applications present elevated security risks** that should be carefully evaluated against the organization's data classification and risk tolerance.
+- **Native platforms offer stronger security primitives** than cross-platform frameworks, but React Native can be a viable option when paired with proper native module bridges for security-critical operations.
+- **Security Incident Event (SIE) response capabilities** should be a primary consideration when selecting an architecture, as the ability to rapidly detect, contain, and remediate incidents varies significantly across platform choices.
 
 ---
 
 ## 2. Scope and Purpose
 
-This guide serves as a **decision framework** — not a prescriptive mandate. It is intended to:
+This guide serves as an **advisory decision framework** — not a prescriptive mandate, certification, or approval. It is intended to:
 
-1. Enumerate **all cross-cutting concerns** that must be addressed before writing the first line of code
+1. Enumerate **all cross-cutting concerns** that should be addressed before writing the first line of code
 2. Provide a **pros and cons analysis** for each platform choice against each concern
 3. Present the **complete authentication and identity landscape** available within GC constraints
 4. Offer a **decision tree** that Federal departments can follow based on their specific risk profile, user base, and operational requirements
@@ -150,7 +164,7 @@ This guide serves as a **decision framework** — not a prescriptive mandate. It
 
 ### 3.4 Hybrid / WebView Shell Applications
 
-> **⚠️ This pattern is strongly discouraged for GC applications handling any sensitive data.**
+> **⚠️ Organizations should carefully evaluate the security trade-offs of this pattern before adoption, particularly for applications handling sensitive data.**
 
 A "shell app" is a native application wrapper that embeds a full-screen `WKWebView` (iOS) or `WebView` (Android) to render a remotely-hosted web application.
 
@@ -175,7 +189,7 @@ A "shell app" is a native application wrapper that embeds a full-screen `WKWebVi
 | **Data Leakage** | WebView caches (HTTP cache, DOM storage) persist on disk and can be forensically extracted. |
 | **Content Security Policy Limitations** | CSP headers apply to the web content but do not protect the native bridge layer. |
 
-**Bottom Line:** A WebView shell is functionally equivalent to running a browser bookmark. It provides no additional security controls beyond what a standard mobile browser offers, while creating a false sense of security by appearing as a "native app." For any GC application requiring Protected B data handling, **this pattern must be avoided.**
+**Bottom Line:** A WebView shell is functionally equivalent to running a browser bookmark. It provides no additional security controls beyond what a standard mobile browser offers, while creating a false sense of security by appearing as a "native app." Organizations handling classified or sensitive data should **carefully assess whether this pattern meets their security requirements** given these inherent limitations.
 
 ### 3.5 Platform Comparison Matrix
 
@@ -197,20 +211,22 @@ A "shell app" is a native application wrapper that embeds a full-screen `WKWebVi
 
 ## 4. Authentication and Identity Architecture
 
-### 4.1 GC Enterprise Identity Platform — Non-Negotiable Constraint
+### 4.1 Enterprise Identity Platform — Organizational Constraint
 
-All GC applications must authenticate against the **Government of Canada's enterprise Identity Provider (IdP)**, which is based on the GC Sign-In / Trusted Digital Identity framework. This is a non-negotiable requirement driven by:
+Most enterprise environments authenticate against a centralized **Identity Provider (IdP)**. In the Government of Canada context, this is the GC Sign-In / Trusted Digital Identity framework. This is typically a non-negotiable requirement driven by organizational policy, including:
 
-- **Treasury Board Policy on Service and Digital** — mandates use of GC enterprise identity services
+- **Treasury Board Policy on Service and Digital** — references use of GC enterprise identity services
 - **ITPIN 2018-01** — direction on trusted digital identity
 - **CCCS guidance** — alignment with Canadian Centre for Cyber Security recommendations
 
+> **Note:** The following architectural considerations apply broadly to any enterprise IdP integration. Organizations should verify these constraints against their own identity governance policies.
+
 **What this means architecturally:**
 
-- The mobile app is a **Relying Party (RP)** — it does not manage credentials directly
-- Authentication flows must use **standard protocols** (OAuth 2.0/2.1, OpenID Connect) against the GC IdP
-- The app **cannot** implement its own username/password store or custom credential scheme
-- All session management is token-based; the GC IdP issues tokens, the app validates and stores them securely
+- The mobile app is typically a **Relying Party (RP)** — it does not manage credentials directly
+- Authentication flows should use **standard protocols** (OAuth 2.0/2.1, OpenID Connect) against the enterprise IdP
+- The app **should not** implement its own username/password store or custom credential scheme
+- All session management is typically token-based; the IdP issues tokens, the app validates and stores them securely
 
 **Degrees of Freedom:** While the IdP is fixed, there is significant design space in:
 - How tokens are stored on-device (software vs. hardware-backed)
@@ -224,36 +240,79 @@ OAuth 2.1 (consolidation of OAuth 2.0 best practices, RFC 9700) is the recommend
 
 #### 4.2.1 Authorization Code Flow with PKCE (Mandatory)
 
-```
-┌──────────┐                                    ┌──────────────┐
-│  Mobile   │──(1) Auth Request + code_challenge──▶│   GC IdP      │
-│  App      │                                    │  (Auth Server)│
-│           │◀──(2) Authorization Code───────────│               │
-│           │──(3) Token Request + code_verifier──▶│               │
-│           │◀──(4) Access Token + Refresh Token──│               │
-└──────────┘                                    └──────────────┘
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as 📱 Mobile App
+    participant Browser as 🌐 System Browser
+    participant IdP as 🔐 Enterprise IdP<br/>(Authorization Server)
+    participant API as 🖥️ Resource Server
+
+    Note over App: Generate code_verifier (random)<br/>Derive code_challenge = SHA256(code_verifier)
+
+    App->>Browser: Open authorization URL<br/>+ code_challenge + state + redirect_uri
+    Browser->>IdP: GET /authorize<br/>response_type=code&code_challenge=...&scope=openid profile
+    
+    rect rgb(255, 245, 230)
+        Note over Browser,IdP: User Authentication Ceremony
+        IdP->>Browser: Present login page
+        Browser->>IdP: User enters credentials + MFA
+        IdP->>IdP: Validate credentials,<br/>evaluate Conditional Access policies
+    end
+
+    IdP->>Browser: 302 Redirect → redirect_uri?code=AUTH_CODE&state=...
+    Browser->>App: Deep link / custom scheme with authorization code
+
+    App->>IdP: POST /token<br/>grant_type=authorization_code<br/>code=AUTH_CODE&code_verifier=...
+    IdP->>IdP: Verify code_challenge ==<br/>SHA256(code_verifier)
+    IdP-->>App: 200 OK — Access Token + Refresh Token + ID Token
+
+    Note over App: Store tokens in HSM-backed storage<br/>(Keychain / Android Keystore)
+
+    App->>API: API Request + Bearer Access Token
+    API-->>App: Protected Resource
 ```
 
-- **PKCE is mandatory** (not optional) — mitigates authorization code interception
-- The implicit flow is **prohibited** under OAuth 2.1
-- Client secrets **must not** be embedded in mobile applications
+- **PKCE is strongly recommended** (and required under OAuth 2.1) — mitigates authorization code interception
+- The implicit flow is **not recommended** under OAuth 2.1
+- Client secrets **should not** be embedded in mobile applications
 
 #### 4.2.2 Device-Bound Token Enhancement (DPoP — Demonstrating Proof-of-Possession)
 
 Standard bearer tokens are vulnerable if extracted from device storage. **DPoP (RFC 9449)** binds tokens to a device-specific cryptographic key:
 
-```
-┌──────────┐                                     ┌──────────────┐
-│  Mobile   │──(1) Generate key pair in HSM──────▶│ Secure Enclave│
-│  App      │◀──(1a) Public key reference─────────│ / Keystore    │
-│           │                                     └──────────────┘
-│           │──(2) Token Request + DPoP Proof──────▶┌──────────────┐
-│           │◀──(3) DPoP-bound Access Token────────│   GC IdP      │
-│           │                                      └──────────────┘
-│           │──(4) API Request + DPoP Proof────────▶┌──────────────┐
-│           │   (signed by device HSM key)          │  Resource     │
-│           │◀──(5) Protected Resource─────────────│  Server       │
-└──────────┘                                      └──────────────┘
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as 📱 Mobile App
+    participant HSM as 🔒 Secure Enclave<br/>/ Android Keystore
+    participant IdP as 🔐 Enterprise IdP
+    participant API as 🖥️ Resource Server
+
+    rect rgb(230, 245, 255)
+        Note over App,HSM: One-Time Device Key Provisioning
+        App->>HSM: Generate EC P-256 key pair<br/>(kSecAttrTokenIDSecureEnclave / setIsStrongBoxBacked)
+        HSM-->>App: Public key reference<br/>(private key NEVER leaves HSM)
+    end
+
+    Note over App: Construct DPoP Proof JWT:<br/>{ typ: "dpop+jwt", alg: "ES256", jwk: device_pub_key }<br/>{ htm: "POST", htu: "/token", iat: now, jti: nonce }
+
+    App->>HSM: Sign DPoP proof with private key
+    HSM-->>App: DPoP proof signature (ES256)
+
+    App->>IdP: POST /token<br/>grant_type=authorization_code<br/>DPoP: <signed_proof_JWT>
+    IdP->>IdP: Validate DPoP proof signature<br/>Bind access token to device public key<br/>(cnf.jkt = JWK thumbprint)
+    IdP-->>App: DPoP-bound Access Token + Refresh Token
+
+    Note over App: For each API request:
+    App->>HSM: Sign new DPoP proof<br/>(htm, htu, ath=hash(access_token), jti=unique)
+    HSM-->>App: Fresh DPoP proof signature
+
+    App->>API: API Request<br/>Authorization: DPoP <access_token><br/>DPoP: <fresh_signed_proof>
+    API->>API: Validate access token<br/>Validate DPoP proof signature matches cnf.jkt<br/>Verify jti uniqueness (replay protection)
+    API-->>App: ✅ Protected Resource
+
+    Note over App,API: Token is USELESS without<br/>the HSM-bound private key
 ```
 
 **How this enhances security:**
@@ -263,40 +322,51 @@ Standard bearer tokens are vulnerable if extracted from device storage. **DPoP (
 
 **Token + Device Information Flow:**
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      DPoP Token Payload                         │
-├─────────────────────────────────────────────────────────────────┤
-│  Standard Claims:                                               │
-│    iss: https://gc-idp.canada.ca                                │
-│    sub: <user-id>                                               │
-│    aud: <api-resource-identifier>                               │
-│    exp: <short-lived, e.g. 5 minutes>                           │
-│    iat: <issued-at>                                             │
-│                                                                 │
-│  DPoP Proof (JWT Header):                                       │
-│    typ: dpop+jwt                                                │
-│    alg: ES256 (ECDSA with P-256)                                │
-│    jwk: <device public key from HSM>                            │
-│                                                                 │
-│  DPoP Proof (JWT Payload):                                      │
-│    htm: POST                                                    │
-│    htu: https://api.service.canada.ca/resource                  │
-│    iat: <timestamp>                                             │
-│    jti: <unique-per-request nonce>                               │
-│                                                                 │
-│  Device Context (Custom Claims for Zero-Trust):                 │
-│    cnf.jkt: <JWK thumbprint of device key>                      │
-│    device_integrity: <Play Integrity / App Attest token>        │
-│    device_id: <hardware-derived identifier>                     │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph AT["Access Token - JWT - Issued by IdP"]
+        direction TB
+        A1["iss: idp.enterprise.example"]
+        A2["sub: user-id"]
+        A3["aud: api-resource-identifier"]
+        A4["exp: 5 min / iat: issued-at"]
+        A5["cnf.jkt: JWK-thumbprint-of-device-key"]
+    end
+
+    subgraph DH["DPoP Proof - JWT Header"]
+        direction TB
+        B1["typ: dpop+jwt"]
+        B2["alg: ES256 - ECDSA P-256"]
+        B3["jwk: device public key from HSM"]
+    end
+
+    subgraph DP["DPoP Proof - JWT Payload"]
+        direction TB
+        C1["htm: POST"]
+        C2["htu: api.service.example/resource"]
+        C3["iat: timestamp / jti: unique nonce"]
+        C4["ath: SHA-256 hash of access token"]
+    end
+
+    subgraph DC["Device Context - Zero-Trust Claims"]
+        direction TB
+        D1["device_integrity: Play Integrity or App Attest token"]
+        D2["device_id: hardware-derived identifier"]
+    end
+
+    AT --> DH --> DP --> DC
+
+    style AT fill:#e6f3ff,stroke:#0066cc,stroke-width:2px
+    style DH fill:#fff3e6,stroke:#cc6600,stroke-width:2px
+    style DP fill:#f3e6ff,stroke:#6600cc,stroke-width:2px
+    style DC fill:#e6ffe6,stroke:#006600,stroke-width:2px
 ```
 
 #### 4.2.3 Refresh Token Rotation
 
-- Refresh tokens **must** be rotated on every use (OAuth 2.1 requirement)
+- Refresh tokens **should** be rotated on every use (as recommended by OAuth 2.1)
 - Previous refresh tokens are invalidated immediately upon rotation
-- Refresh tokens stored in HSM-backed storage (Keychain with `kSecAttrAccessibleWhenUnlockedThisDeviceOnly` on iOS, EncryptedSharedPreferences backed by Android Keystore)
+- Refresh tokens should be stored in HSM-backed storage (Keychain with `kSecAttrAccessibleWhenUnlockedThisDeviceOnly` on iOS, EncryptedSharedPreferences backed by Android Keystore)
 - Refresh token lifetime should be bounded (e.g., 24–48 hours) with re-authentication required beyond that window
 
 ### 4.3 OpenID Connect (OIDC) and Claims-Based Identity
@@ -319,18 +389,44 @@ OpenID Connect is the identity layer built on top of OAuth 2.1. It provides:
 
 **OIDC + Device Binding Flow:**
 
-```
-1. App initiates OIDC flow with scope: openid profile gc-assurance
-2. GC IdP authenticates user (password + MFA + optional device attestation)
-3. GC IdP returns:
-   - ID Token (user identity + assurance level + auth methods)
-   - Access Token (API authorization, DPoP-bound)
-   - Refresh Token (session continuity, device-bound)
-4. App validates ID Token signature against GC IdP JWKS endpoint
-5. App checks acr claim meets minimum assurance level
-6. App checks amr claim includes required authentication methods
-7. App stores tokens in HSM-backed storage
-8. Subsequent API calls include DPoP-bound access token
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as 📱 Mobile App
+    participant HSM as 🔒 Secure Enclave<br/>/ Keystore
+    participant IdP as 🔐 Enterprise IdP<br/>(OIDC Provider)
+    participant JWKS as 📜 IdP JWKS Endpoint
+    participant API as 🖥️ Resource Server
+
+    App->>IdP: OIDC Auth Request<br/>scope: openid profile enterprise-assurance<br/>+ PKCE code_challenge + DPoP key
+
+    rect rgb(255, 240, 240)
+        Note over IdP: User Authentication Ceremony
+        IdP->>IdP: Authenticate user<br/>(password + MFA + optional device attestation)
+        IdP->>IdP: Evaluate assurance level<br/>Assign acr = LOA2/LOA3
+    end
+
+    IdP-->>App: Token Response:<br/>• ID Token (sub, acr, amr, auth_time, at_hash)<br/>• Access Token (DPoP-bound, cnf.jkt)<br/>• Refresh Token (device-bound)
+
+    rect rgb(230, 255, 230)
+        Note over App,JWKS: Client-Side Token Validation
+        App->>JWKS: GET /.well-known/jwks.json
+        JWKS-->>App: IdP public signing keys
+        App->>App: Validate ID Token signature
+        App->>App: Check acr ≥ minimum assurance level
+        App->>App: Check amr includes required methods<br/>(e.g., ["pwd", "otp", "hwk"])
+        App->>App: Validate at_hash matches access token
+    end
+
+    App->>HSM: Store tokens in HSM-backed storage
+    HSM-->>App: ✅ Tokens secured
+
+    loop Subsequent API Calls
+        App->>HSM: Sign DPoP proof for request
+        HSM-->>App: DPoP proof (ES256)
+        App->>API: Request + DPoP-bound Access Token + DPoP Proof
+        API-->>App: Protected Resource
+    end
 ```
 
 ### 4.4 Why MFA Alone Is Insufficient
@@ -367,11 +463,32 @@ Multi-Factor Authentication (MFA) is a **necessary but not sufficient** control 
 
 **The Security Model:**
 
-```
-MFA alone:           User Identity ✓  +  Device Identity ✗
-MFA + DPoP:          User Identity ✓  +  Device Identity ✓ (token-bound)
-MFA + DPoP + mTLS:   User Identity ✓  +  Device Identity ✓ (channel-bound)
-MFA + DPoP + Attest: User Identity ✓  +  Device Identity ✓ + App Integrity ✓
+```mermaid
+flowchart TD
+    subgraph L1["MFA Alone"]
+        U1["User Identity: YES"] --- X1["Device Identity: NO"]
+    end
+
+    subgraph L2["MFA + DPoP"]
+        U2["User Identity: YES"] --- D2["Device Identity: YES\n token-bound"]
+    end
+
+    subgraph L3["MFA + DPoP + mTLS"]
+        U3["User Identity: YES"] --- D3["Device Identity: YES\n channel-bound"]
+    end
+
+    subgraph L4["MFA + DPoP + mTLS + Attestation"]
+        U4["User Identity: YES"] --- D4["Device Identity: YES"] --- A4["App Integrity: YES"]
+    end
+
+    L1 -.->|"Add DPoP"| L2
+    L2 -.->|"Add mTLS"| L3
+    L3 -.->|"Add Attestation"| L4
+
+    style L1 fill:#ffcccc,stroke:#cc0000
+    style L2 fill:#fff3cc,stroke:#cc8800
+    style L3 fill:#ccffcc,stroke:#008800
+    style L4 fill:#ccffcc,stroke:#006600,stroke-width:3px
 ```
 
 The goal is **User + Device + App** verification at multiple layers.
@@ -455,24 +572,38 @@ Libraries like `react-native-keychain` and `react-native-biometrics` provide par
 
 Client certificate (mTLS) authentication provides a **transport-layer device identity** that complements the application-layer OAuth/OIDC identity:
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                    mTLS Handshake                              │
-├──────────────────────────────────────────────────────────────┤
-│                                                               │
-│  1. Client initiates TLS connection to GC API gateway          │
-│  2. Server presents its certificate (standard TLS)             │
-│  3. Server requests client certificate (CertificateRequest)    │
-│  4. Client retrieves certificate chain from device store       │
-│  5. Client signs the TLS handshake with HSM-stored private key │
-│  6. Server validates:                                          │
-│     a. Certificate chain → GC-trusted CA                       │
-│     b. Certificate not revoked (CRL/OCSP)                      │
-│     c. Certificate subject matches expected device identity    │
-│  7. TLS session established with mutual authentication         │
-│                                                               │
-│  Result: Every byte transmitted is bound to a verified device  │
-└──────────────────────────────────────────────────────────────┘
+```mermaid
+sequenceDiagram
+    autonumber
+    participant App as 📱 Mobile App
+    participant HSM as 🔒 HSM<br/>(Secure Enclave / Keystore)
+    participant GW as 🌐 API Gateway
+    participant CA as 📜 Enterprise PKI<br/>(CRL / OCSP)
+
+    rect rgb(240, 248, 255)
+        Note over App,GW: TLS Handshake — Mutual Authentication
+        App->>GW: ClientHello<br/>(supported cipher suites, TLS 1.3)
+        GW-->>App: ServerHello + Server Certificate<br/>+ CertificateRequest 📋
+
+        Note over App: Server requests client certificate
+
+        App->>HSM: Retrieve device certificate chain<br/>+ Sign handshake with HSM-stored private key
+        HSM-->>App: Signed CertificateVerify<br/>(private key never exported)
+
+        App->>GW: Client Certificate + CertificateVerify (signature)
+    end
+
+    rect rgb(255, 245, 238)
+        Note over GW,CA: Server-Side Certificate Validation
+        GW->>GW: Validate certificate chain<br/>→ Enterprise-trusted CA
+        GW->>CA: Check revocation status<br/>(OCSP stapling / CRL)
+        CA-->>GW: Certificate status: ✅ Valid
+        GW->>GW: Verify certificate subject<br/>matches expected device identity
+    end
+
+    GW-->>App: ✅ TLS Session Established<br/>(Mutual Authentication Complete)
+
+    Note over App,GW: 🔐 Every byte transmitted is now<br/>cryptographically bound to a verified device
 ```
 
 **Device Certificate Lifecycle:**
@@ -486,13 +617,34 @@ Client certificate (mTLS) authentication provides a **transport-layer device ide
 
 **Combined Flow — mTLS + OAuth 2.1 + DPoP:**
 
-```
-Layer 1 (TLS):     Device ←──mTLS──→ API Gateway     → Device is authenticated
-Layer 2 (OAuth):   User   ←──DPoP token──→ Resource    → User is authorized  
-Layer 3 (App):     Binary ←──Attestation──→ Verifier   → App is genuine
+```mermaid
+flowchart TB
+    subgraph Layer1["Layer 1: Transport - TLS"]
+        direction LR
+        D1["Device"] -->|"mTLS with HSM-bound\nclient certificate"| GW["API Gateway"]
+        GW -->|"Verified"| V1["Device is Authenticated"]
+    end
 
-Three independent verification layers. Compromise of one does not break the others.
+    subgraph Layer2["Layer 2: Application - OAuth 2.1"]
+        direction LR
+        D2["User"] -->|"DPoP-bound Access Token\n+ Proof-of-Possession"| RS["Resource Server"]
+        RS -->|"Verified"| V2["User is Authorized"]
+    end
+
+    subgraph Layer3["Layer 3: Integrity - Attestation"]
+        direction LR
+        D3["App Binary"] -->|"App Attest / Play Integrity\nhardware-backed assertion"| AV["Attestation Verifier"]
+        AV -->|"Verified"| V3["App is Genuine"]
+    end
+
+    Layer1 --- Layer2 --- Layer3
+
+    style Layer1 fill:#e6f3ff,stroke:#0066cc,stroke-width:2px
+    style Layer2 fill:#fff3e6,stroke:#cc6600,stroke-width:2px
+    style Layer3 fill:#e6ffe6,stroke:#006600,stroke-width:2px
 ```
+
+> **Three independent verification layers. Compromise of one does not break the others.**
 
 ### 4.7 Reducing Login Prompts — Silent Token Renewal
 
@@ -565,11 +717,11 @@ This section provides a detailed comparison between two architectures:
 
 ### Verdict
 
-For any GC application that handles personal information, Protected A, or Protected B data:
+For applications that handle personal information, Protected A, or Protected B data, organizations should carefully consider the following:
 
-> **WebView shell applications do not meet the minimum security requirements.** The inability to guarantee code integrity, protect tokens in hardware, or resist injection attacks makes this architecture unsuitable.
+> **WebView shell applications present significant challenges in meeting typical enterprise security requirements.** The limitations around code integrity, hardware-backed token storage, and injection resistance make this architecture a higher-risk choice that may not satisfy security assessment criteria.
 
-A locally-bundled React Native application or a fully native application should be used instead.
+Organizations choosing this pattern should do so with an **informed risk acceptance** and documented rationale. A locally-bundled React Native application or a fully native application generally provides a stronger security posture.
 
 ---
 
@@ -583,9 +735,9 @@ Logging in a mobile context differs fundamentally from server-side logging. Logs
 |--------|----------|
 | **What to Log** | App lifecycle events, authentication success/failure, API call results (status codes only), navigation events, crash data, performance metrics. |
 | **What NOT to Log** | Tokens, credentials, PII, request/response bodies, user input, biometric data, device identifiers that could enable tracking. |
-| **Storage** | Logs must be encrypted at rest. Use OS-provided encrypted storage. Implement log rotation with maximum retention (e.g., 7 days on-device). |
-| **Exfiltration Protection** | Logs must not be extractable from the device without the app's cooperation. On non-managed devices, logs should be encrypted with an app-specific key. |
-| **Remote Collection** | For centralized observability, logs should be transmitted to the backend over mTLS channels. Collection must comply with GC privacy requirements. User consent may be required. |
+| **Storage** | Logs should be encrypted at rest. Use OS-provided encrypted storage. Implement log rotation with maximum retention (e.g., 7 days on-device). |
+| **Exfiltration Protection** | Logs should not be extractable from the device without the app's cooperation. On non-managed devices, logs should be encrypted with an app-specific key. |
+| **Remote Collection** | For centralized observability, logs should be transmitted to the backend over mTLS channels. Collection should comply with applicable privacy requirements. User consent may be required. |
 | **Structured Format** | Use structured logging (JSON) with consistent fields: timestamp (ISO 8601), correlation ID, severity, component, event type. |
 
 **Platform Comparison:**
@@ -606,8 +758,8 @@ Auditing captures **who did what, when, and from where** for accountability and 
 | **Audit Events** | Login, logout, data access, data modification, permission changes, export operations, attestation results. |
 | **Audit Fields** | User ID (sub claim), device ID, timestamp, action, resource, outcome, session ID, IP address (captured server-side). |
 | **Client-Side Role** | The mobile app generates audit event payloads and transmits them to the backend audit service. The app is NOT the system of record. |
-| **Tamper Resistance** | Audit events must be signed with the device's HSM-bound key before transmission. The backend verifies the signature against the registered device public key. |
-| **Offline Audit** | Events generated offline must be queued in encrypted storage and transmitted when connectivity is restored, with original timestamps preserved. |
+| **Tamper Resistance** | Audit events should be signed with the device's HSM-bound key before transmission. The backend verifies the signature against the registered device public key. |
+| **Offline Audit** | Events generated offline should be queued in encrypted storage and transmitted when connectivity is restored, with original timestamps preserved. |
 | **Retention** | Audit records retained per GC MITS and departmental retention schedules (typically 2–7 years). |
 
 ### 6.3 Distributed Tracing
@@ -620,7 +772,7 @@ Distributed tracing correlates a single user operation across the mobile app, AP
 | **Trace Initiation** | The mobile app generates a trace ID at the start of each user operation and propagates it through all API calls. |
 | **Span Structure** | Mobile app creates spans for: UI interaction → API call → response processing. Backend continues the trace. |
 | **Correlation** | Every API request includes `traceparent` header. Backend logs and traces share the same trace ID. |
-| **Sensitive Data** | Spans must NOT include PII, tokens, or request/response bodies. |
+| **Sensitive Data** | Spans should NOT include PII, tokens, or request/response bodies. |
 | **SDK Options** | OpenTelemetry SDKs exist for iOS (swift), Android (kotlin), and JavaScript (React Native). |
 
 **Platform Comparison:**
@@ -715,7 +867,7 @@ Scalability for mobile apps is primarily a **backend concern**, but the mobile a
 
 ### 6.9 Accessibility (WCAG / GC Standard on Accessible ICT)
 
-GC applications must comply with **WCAG 2.1 AA** and the **GC Standard on Accessible ICT**.
+GC applications should comply with **WCAG 2.1 AA** and the **GC Standard on Accessible ICT**.
 
 | Requirement | Native iOS | Native Android | React Native |
 |-------------|-----------|---------------|--------------|
@@ -729,34 +881,34 @@ GC applications must comply with **WCAG 2.1 AA** and the **GC Standard on Access
 
 ### 6.10 Localization (Official Languages)
 
-All GC applications must support **English and French** as per the Official Languages Act.
+All GC applications should support **English and French** as per the Official Languages Act.
 
 | Concern | Practice |
 |---------|----------|
-| **String Externalization** | All user-facing strings must be in localization files (`.strings`/`.stringsdict` on iOS, `strings.xml` on Android, i18n JSON for RN). |
-| **Layout Flexibility** | French text is typically 15–30% longer than English. UI must accommodate variable text length without truncation. |
+| **String Externalization** | All user-facing strings should be in localization files (`.strings`/`.stringsdict` on iOS, `strings.xml` on Android, i18n JSON for RN). |
+| **Layout Flexibility** | French text is typically 15–30% longer than English. UI should accommodate variable text length without truncation. |
 | **Date/Time/Number Formatting** | Use `Locale`-aware formatters. Never hardcode date formats. |
-| **Accessibility + Localization** | `accessibilityLabel` values must also be localized. |
+| **Accessibility + Localization** | `accessibilityLabel` values should also be localized. |
 | **RTL Consideration** | While not required for EN/FR, if the app will serve Indigenous languages or other scripts, RTL layout support should be architecturally considered. |
 
 ### 6.11 Data Sovereignty and Privacy
 
 | Requirement | Implementation |
 |-------------|---------------|
-| **Data Residency** | All backend services must be hosted within Canada. API endpoints must resolve to Canadian data centers. |
+| **Data Residency** | All backend services should be hosted within Canada per applicable policy. API endpoints should resolve to Canadian data centers. |
 | **On-Device Data** | Minimize data stored on device. Encrypt all local data at rest. Implement remote wipe capability (via MDM or app-level). |
 | **Privacy Impact Assessment** | Required before deployment. Mobile-specific considerations: device telemetry, location data, biometric data processing. |
 | **Data Minimization** | Collect only what is necessary. Do not cache sensitive data beyond session requirements. |
-| **Consent** | If collecting analytics or telemetry beyond essential functionality, user consent must be obtained with clear bilingual explanation. |
+| **Consent** | If collecting analytics or telemetry beyond essential functionality, user consent should be obtained with clear bilingual explanation. |
 
 ### 6.12 Configuration Management
 
 | Concern | Practice |
 |---------|----------|
 | **No Hardcoded Secrets** | API keys, client IDs, endpoints — none should be hardcoded in the binary. Use build-time injection or remote configuration. |
-| **Environment Separation** | Dev, Staging, Production configurations must be isolated. Build variants / schemes for each. |
+| **Environment Separation** | Dev, Staging, Production configurations should be isolated. Build variants / schemes for each. |
 | **Remote Configuration** | Feature flags and non-sensitive configuration can be fetched from a secure remote config service. Cached locally with TTL. |
-| **Build Reproducibility** | Builds must be reproducible from source for audit. Pin all dependency versions. Use lockfiles. |
+| **Build Reproducibility** | Builds should be reproducible from source for audit. Pin all dependency versions. Use lockfiles. |
 
 ### 6.13 Dependency and Supply-Chain Security
 
@@ -819,7 +971,7 @@ START: What is the data classification?
 │    │               jailbreak detection. Requires native expertise
 │    │               for security-critical components.]
 │    │
-│    └─── ⛔ DO NOT USE WebView Shell
+│    └─── ⚠️ WebView Shell presents elevated risk — requires documented risk acceptance
 │
 ├─── Protected A
 │    │
@@ -828,11 +980,11 @@ START: What is the data classification?
 │    │    │         [Local data storage with encryption, background
 │    │    │          sync, offline-first architecture]
 │    │    │
-│    │    └── NO → React Native (recommended for cost efficiency)
+│    │    └── NO → React Native (generally cost-efficient)
 │    │              [Standard OIDC + PKCE + DPoP, Keychain/Keystore
 │    │               via react-native-keychain]
 │    │
-│    └─── ⛔ DO NOT USE WebView Shell
+│    └─── ⚠️ WebView Shell presents elevated risk — requires documented risk acceptance
 │
 ├─── Unclassified (Public-facing informational app)
 │    │
@@ -877,32 +1029,139 @@ START: What is the data classification?
 
 ---
 
-## 9. Recommendations and Next Steps
+## 9. Security Incident Event (SIE) Response — Architecture for Rapid Containment
 
-### Immediate Actions
+A critical factor in mobile architecture selection is the ability to **detect, contain, and remediate security incidents** with maximum speed and control. The following outlines how Microsoft's current technology stack enables SIE response across mobile architectures.
 
-1. **Establish a GC Mobile Security Baseline**
-   - Define minimum security requirements per data classification
-   - Mandate OIDC + PKCE + DPoP for all new mobile applications
-   - Prohibit WebView shell architecture for any app handling sensitive data
-   - Require hardware-backed key storage on all supported devices
+### 9.1 SIE Response Capabilities by Architecture
 
-2. **Create a Shared Security Module Library**
-   - Whether choosing native or React Native, build (or procure) a shared library of security primitives:
-     - HSM key generation and signing
-     - DPoP proof generation
-     - mTLS client certificate handling
-     - Device attestation (App Attest / Play Integrity)
-     - Jailbreak/root detection
-   - This library should be maintained centrally and consumed by all GC mobile projects
+| Capability | Native (Swift/Kotlin) | React Native | WebView Shell |
+|-----------|----------------------|--------------|---------------|
+| **Remote session revocation** | ✅ Immediate via token revocation + Conditional Access | ✅ Immediate via token revocation + Conditional Access | ✅ Immediate via session invalidation |
+| **Remote device wipe** | ✅ Via Microsoft Intune MDM | ✅ Via Microsoft Intune MDM | ⚠️ Partial — web session only |
+| **Selective app data wipe** | ✅ Intune App Protection Policies (APP) | ✅ Intune APP with RN wrapper | ❌ Limited — browser cache only |
+| **Conditional Access enforcement** | ✅ Full Microsoft Entra ID integration | ✅ Full via MSAL native modules | ⚠️ Limited to web session policies |
+| **Real-time risk signal ingestion** | ✅ Microsoft Defender for Endpoint SDK | ✅ Via native module bridge | ❌ Not available |
+| **Compromised device detection** | ✅ Intune compliance + Defender threat signals | ✅ Via native compliance checks | ❌ No device visibility |
+| **Token binding revocation** | ✅ DPoP key invalidation + Entra token revocation | ✅ Via native module | ❌ Bearer-only; no hardware binding |
+| **Automated incident playbooks** | ✅ Microsoft Sentinel + Logic Apps | ✅ Microsoft Sentinel + Logic Apps | ⚠️ Limited telemetry for triggers |
+
+### 9.2 Microsoft Technology Stack for SIE Response
+
+The following Microsoft services form the recommended SIE response stack for mobile applications:
+
+| Layer | Service | Role in SIE Response |
+|-------|---------|---------------------|
+| **Identity** | **Microsoft Entra ID** (Conditional Access, Continuous Access Evaluation) | Real-time session evaluation; revoke access based on risk signals; enforce device compliance at token refresh |
+| **Device Management** | **Microsoft Intune** | Remote wipe (full/selective); compliance policy enforcement; certificate revocation; app data removal |
+| **Threat Detection** | **Microsoft Defender for Endpoint** (Mobile Threat Defense) | On-device threat detection (jailbreak, network threats, malicious apps); risk level signals fed to Entra Conditional Access |
+| **SIEM/SOAR** | **Microsoft Sentinel** | Centralized incident detection from mobile telemetry; automated playbooks via Logic Apps/SOAR; correlation with broader organizational signals |
+| **Observability** | **Azure Monitor + Application Insights** | Real-time telemetry ingestion; anomaly detection on mobile API patterns; custom alerts for SIE indicators |
+| **Communication** | **Microsoft Teams** (via Sentinel integration) | Automated SIE notification to incident response teams; escalation workflows |
+
+### 9.3 SIE Response Playbook — Recommended Pattern
+
+```mermaid
+flowchart TD
+    START(["SECURITY INCIDENT DETECTED"]) --> D
+
+    subgraph D["1. DETECT - seconds"]
+        direction TB
+        D1["Defender for Endpoint\ndetects device compromise"]
+        D2["Sentinel correlates\nanomalous API patterns"]
+        D3["Entra ID detects\nimpossible travel / risky sign-in"]
+    end
+
+    D --> S
+
+    subgraph S["2. SIGNAL - seconds"]
+        direction TB
+        S1["Risk signal propagated to\nEntra Conditional Access"]
+        S2["Device compliance state\nupdated in Intune"]
+        S3["Sentinel incident\ncreated automatically"]
+    end
+
+    S --> C
+
+    subgraph C["3. CONTAIN - seconds to minutes"]
+        direction TB
+        C1["Conditional Access\nblocks token refresh via CAE"]
+        C2["Intune triggers\nselective wipe of app data"]
+        C3["DPoP-bound tokens\ninvalid - key revoked"]
+        C4["mTLS certificate\nrevoked via OCSP"]
+    end
+
+    C --> N
+
+    subgraph N["4. NOTIFY - minutes"]
+        direction TB
+        N1["Sentinel playbook\nnotifies SOC via Teams"]
+        N2["Automated incident\nticket created"]
+        N3["Affected user notified\nvia push / email"]
+    end
+
+    N --> R
+
+    subgraph R["5. REMEDIATE - minutes to hours"]
+        direction TB
+        R1["Device re-enrollment\nrequired via Intune"]
+        R2["New device certificate\nprovisioned"]
+        R3["User re-authenticates\nwith step-up MFA"]
+        R4["Forensic audit trail\npreserved in Sentinel"]
+    end
+
+    R --> DONE(["INCIDENT CONTAINED\nDetection to Containment under 5 min\nwith CAE and automated playbooks"])
+
+    style D fill:#ffdddd,stroke:#cc0000,stroke-width:2px
+    style S fill:#fff3cc,stroke:#cc8800,stroke-width:2px
+    style C fill:#ffd9b3,stroke:#cc5500,stroke-width:2px
+    style N fill:#cce5ff,stroke:#0055cc,stroke-width:2px
+    style R fill:#ccffcc,stroke:#008800,stroke-width:2px
+    style START fill:#ff4444,stroke:#cc0000,color:#fff
+    style DONE fill:#44bb44,stroke:#008800,color:#fff
+```
+
+### 9.4 Continuous Access Evaluation (CAE) — Critical SIE Enabler
+
+**Microsoft Entra ID Continuous Access Evaluation** is a key differentiator for SIE response. Unlike traditional token-based sessions that remain valid until expiry:
+
+- CAE enables **near-real-time** revocation of access tokens when critical events occur (user disabled, password changed, high-risk detection)
+- Resource servers subscribe to **critical event notifications** from Entra ID
+- Token lifetime is effectively reduced to **minutes** rather than the standard expiry window
+- Combined with DPoP, a compromised token is both **revocable** (CAE) and **non-transferable** (hardware-bound)
+
+> **Architecture implication:** Native and React Native (with native modules) applications can fully leverage CAE through the Microsoft Authentication Library (MSAL). WebView shell applications have limited CAE integration capabilities.
+
+---
+
+## 10. Recommendations and Next Steps
+
+> **Note:** The following recommendations are advisory in nature. Each organization should evaluate these against their specific regulatory environment, risk tolerance, operational capacity, and existing infrastructure before adoption. Microsoft provides this guidance to inform decision-making, not to prescribe a specific course of action.
+
+### Suggested Actions for Consideration
+
+1. **Establish a Mobile Security Baseline**
+   - Consider defining minimum security requirements per data classification
+   - Evaluate OIDC + PKCE + DPoP as a baseline for new mobile applications
+   - Assess whether WebView shell architecture meets your organization's security requirements for applications handling sensitive data
+   - Evaluate hardware-backed key storage on all supported devices
+
+2. **Consider a Shared Security Module Library**
+   - Whether choosing native or React Native, evaluate building (or procuring) a shared library of security primitives:
+      - HSM key generation and signing
+      - DPoP proof generation
+      - mTLS client certificate handling
+      - Device attestation (App Attest / Play Integrity)
+      - Jailbreak/root detection
+   - A centrally maintained library can reduce duplication and improve consistency across mobile projects
 
 3. **Develop a Mobile Threat Model Template**
-   - Based on OWASP MASTG and STRIDE, create a GC-specific threat model template
-   - Include GC-specific threats: cross-border device usage, official languages requirements, GC IdP integration
+   - Based on OWASP MASTG and STRIDE, consider creating an organization-specific threat model template
+   - Include organization-specific threats: cross-border device usage, official languages requirements, enterprise IdP integration
 
-4. **Pilot FIDO2 / Passkeys**
-   - Engage with the GC IdP team to pilot FIDO2 / Passkey support
-   - This is the most significant usability + security improvement on the horizon
+4. **Evaluate FIDO2 / Passkeys**
+   - Engage with the enterprise IdP team to evaluate FIDO2 / Passkey support
+   - This represents a significant potential usability + security improvement
    - Eliminates passwords entirely; hardware-bound; phishing-resistant
 
 ### Architecture Principles
@@ -910,31 +1169,35 @@ START: What is the data classification?
 | # | Principle | Rationale |
 |---|-----------|-----------|
 | 1 | **Assume the device is compromised** | Design all security controls to be resilient to a rooted/jailbroken device. Defense-in-depth, not perimeter-only. |
-| 2 | **Never trust the client** | All authorization decisions must be validated server-side. Client-side checks are for UX only. |
-| 3 | **Hardware-bind all secrets** | Every cryptographic key and credential must be stored in the platform's hardware security module. Software-only key storage is unacceptable. |
+| 2 | **Never trust the client** | All authorization decisions should be validated server-side. Client-side checks are for UX only. |
+| 3 | **Hardware-bind all secrets** | Every cryptographic key and credential should be stored in the platform's hardware security module where available. Software-only key storage introduces additional risk. |
 | 4 | **Minimize on-device data** | Store the minimum data required for functionality. Treat the device as a transient view into backend data, not a data store. |
 | 5 | **Log everything, expose nothing** | Comprehensive observability with strict PII/credential redaction. |
-| 6 | **Build for both languages from day one** | Retrofitting localization is expensive. String externalization and flexible layout must be in the initial architecture. |
+| 6 | **Build for both languages from day one** | Retrofitting localization is expensive. String externalization and flexible layout should be in the initial architecture. |
 | 7 | **Test security continuously** | Automated security testing (SAST, DAST, dependency scanning) in CI/CD. Periodic OWASP MASTG assessments. |
 | 8 | **Plan for offline** | Even if offline is not a V1 requirement, the data layer should support it. Retrofitting offline sync is architecturally disruptive. |
 
 ---
 
-## 10. Appendix — Glossary and References
+## 11. Appendix — Glossary and References
 
 ### Glossary
 
 | Term | Definition |
 |------|-----------|
+| **CAE** | Continuous Access Evaluation — Microsoft Entra ID capability for near-real-time token revocation based on critical security events. |
 | **DPoP** | Demonstrating Proof-of-Possession — RFC 9449. Mechanism to bind access tokens to a client's public key. |
 | **HSM** | Hardware Security Module — dedicated hardware for cryptographic operations and key storage. On mobile: Secure Enclave (iOS), StrongBox/TEE (Android). |
 | **mTLS** | Mutual TLS — both client and server present certificates during the TLS handshake. |
 | **PKCE** | Proof Key for Code Exchange — RFC 7636. Mitigates authorization code interception in public clients. |
 | **OIDC** | OpenID Connect — identity layer built on OAuth 2.0/2.1. Provides ID tokens and standard claims. |
 | **GC IdP** | Government of Canada Identity Provider — the enterprise identity service for federal authentication. |
+| **MSAL** | Microsoft Authentication Library — SDK for integrating with Microsoft Entra ID across platforms. |
 | **MASTG** | Mobile Application Security Testing Guide — OWASP's comprehensive mobile security testing methodology. |
 | **App Attest** | Apple's API for generating a hardware-backed assertion that the app is genuine and unmodified. |
 | **Play Integrity** | Google's API for verifying app and device integrity on Android. |
+| **SIE** | Security Incident Event — a detected security occurrence requiring investigation and response. |
+| **Sentinel** | Microsoft Sentinel — cloud-native SIEM/SOAR platform for security event aggregation, detection, and automated response. |
 | **RBAC** | Role-Based Access Control — permissions assigned to roles, users assigned to roles. |
 | **ABAC** | Attribute-Based Access Control — permissions based on attributes of user, resource, action, and context. |
 | **COPE** | Corporate-Owned, Personally-Enabled — MDM deployment model where the organization owns the device. |
@@ -951,6 +1214,11 @@ START: What is the data classification?
 - OWASP Mobile Application Security Verification Standard (MASVS)
 - Apple Secure Enclave Documentation
 - Android Keystore System Documentation
+- Microsoft Entra ID — Continuous Access Evaluation Documentation
+- Microsoft Intune — App Protection Policies Documentation
+- Microsoft Defender for Endpoint — Mobile Threat Defense Documentation
+- Microsoft Sentinel — SOAR Playbook Documentation
+- Microsoft Authentication Library (MSAL) — https://learn.microsoft.com/en-us/entra/msal/
 - GC Standard on Accessible ICT
 - Treasury Board Policy on Service and Digital
 - CCCS — Canadian Centre for Cyber Security Guidance
@@ -959,4 +1227,4 @@ START: What is the data classification?
 
 ---
 
-*This document is a living guide. It should be reviewed and updated as GC identity infrastructure evolves, new platform security features emerge, and threat landscapes change.*
+*This document is a living advisory guide provided for informational purposes only. It should be reviewed and updated as enterprise identity infrastructure evolves, new platform security features emerge, and threat landscapes change. All recommendations are subject to the organization's own governance, risk management, and compliance frameworks. Microsoft makes no warranties, express or implied, regarding the completeness or accuracy of this guidance.*
