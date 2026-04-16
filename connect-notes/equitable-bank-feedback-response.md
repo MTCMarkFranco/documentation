@@ -174,3 +174,58 @@ Based purely on the transcript evidence:
 ---
 
 *All quotes are verbatim extracts from the meeting transcript: "CONFIRMED: Hub-Toronto Engagement – Equitable Bank" (April 14, 2026, 9:30 AM – 4:30 PM ET).*
+
+---
+
+## Manager Questions → Customer Responses (Summarized from Transcript)
+
+---
+
+### Q1: "Ask customer, what are they looking to get out of the day"
+
+**Customer Response:**
+EQ Bank was clear and specific about what they wanted from the day — a **minimum viable path to production** for an existing POC, with reusable patterns that wouldn't create technical debt.
+
+- **Deep Shah (Senior Product Manager):** *"The North Star is the customer experience… ultimately, it's the onboarding time going down."*
+- **EQ Bank AI/Platform Lead:** *"What I want to take away from today is… the minimum viable path to production to unblock digital bank without jeopardizing the backend and making sure we don't create a pattern that we'll have to refactor in six months' time."*
+- **Laurie Roseland-Barnes (summarizing what she heard):** *"What I heard from you is a clear path to production… minimal viable product is your end goal and you want reusable patterns because there are other use cases coming down the pipe."*
+
+**Summary:** The customer wasn't looking for ideation — they wanted alignment across engineering, platform, infrastructure, and partners on how to move from POC to production safely and quickly.
+
+---
+
+### Q2: "What is the agenda — not in the meeting invite or discussed at the beginning?"
+
+**Customer Response:**
+No customer confusion about the agenda was expressed at any point in the transcript. When Mark walked through the flow — customer-led discovery, collaborative discussion, then technical guidance — and asked *"Any thoughts? Comments? Questions before we jump into the discovery piece?"* the EQ team moved directly into sharing their goals and context without hesitation.
+
+**Summary:** The customer engaged immediately with the structure as presented. There were no questions, complaints, or confusion about what the day would cover. The collaborative, customer-led format was understood and embraced.
+
+---
+
+### Q3: "What are the challenges they are facing with the current implementation?"
+
+**Customer Response:**
+The EQ team described challenges in detail — their work is functionally ~80–90% complete but blocked by production readiness, governance, and platform gaps.
+
+- **Deep Shah:** *"It's really about handoffs. So like stuff takes time. There's a queue. So it is a backlog of stuff — this analyst is not only working on this onboarding, they're working with other functions that they also do from an AML first line perspective."*
+- **EQ Bank Leadership:** *"I feel like this use case is probably 80% done, and it's that last 20% that takes 80% of the effort."*
+- **EQ Bank Leadership:** *"We don't have the infrastructure. We don't have a project that takes this POC to production."*
+- **EQ Bank Engineering:** *"We're stuck with what we're currently only able to do in Copilot, which is limited for some of the multi-agent orchestration we want to expand into."*
+- **EQ Bank AI Lead:** *"This use case might completely get revamped in six months' time… so the question is how much should we do now while we onboard the platform."*
+
+**Summary:** Blockers are architectural and organizational — no agreed production architecture, unresolved platform decisions (Foundry vs Copilot Studio, APIM), governance/compliance requirements (PII, human-in-the-loop for AML), and risk of near-term rework due to upcoming AML platform changes (Verafin). The problem isn't use-case clarity; it's getting from POC to production.
+
+---
+
+### Q4: "A good discussion, how do you know it's the right discussion — without knowing the customer's key concerns/challenges"
+
+**Customer Response:**
+The customer articulated their concerns unprompted and with specificity — a North Star metric, quantified targets, and named production blockers:
+
+- **Deep Shah:** *"The North Star is the customer experience… the onboarding time goes down by 20%."* Current onboarding takes ~10 business days; target is ~8 days.
+- **Deep Shah:** *"If we're going to get to 2,000 to 4,000 monthly applications… we're going to see at least half to 1% of revenue in savings."*
+- **EQ Bank team (on transparency concerns):** *"The transparency of how the reasoning aspect, right, because with Copilot Studio it's limited."*
+- **EQ Bank Engineering:** *"It's really now how do we productionalize what we have and what is the best path forward."*
+
+**Summary:** The customer knew their use case, knew the value, and articulated measurable outcomes. The discussion was anchored on customer-stated concerns from the outset — they led with business goals, blockers, and success metrics because that's exactly what the facilitation invited them to do. The discussion was "right" because the customer confirmed it was right through their own specificity and engagement.
