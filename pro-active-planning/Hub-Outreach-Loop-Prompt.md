@@ -34,10 +34,10 @@ PREREQ CHECK
 ---
 
 ## 🎯 Goal (one sentence)
-Produce a complete Hub outreach package — collected App Innovation one-pagers, **draft-only** emails to each priority account's AE + ATS, and a 2-slide PowerPoint — all grounded in real data pulled from the available skills, and saved into a single organized folder.
+Produce a complete Hub outreach package — collected App Innovation one-pagers, **draft-only** emails to each priority account's AE + ATS (saved as HTML **and** created as real drafts in the user's Outlook Drafts folder), and a 2-slide PowerPoint — all grounded in real data pulled from the available skills, and saved into a single organized folder.
 
 ## 🚧 Hard guardrails (never violate)
-1. **NEVER send email.** Create **drafts only**. No `send`, no auto-send, no calendar invites.
+1. **NEVER send email.** Create **drafts only**. No `send`, no auto-send, no calendar invites. Creating a draft in Outlook (e.g., the mail tool's `CreateDraftMessage`) is allowed and expected — it saves to the Drafts folder without sending. Never call any `Send*` / `SendDraft*` operation.
 2. **Never fabricate** names, numbers, emails, pipeline figures, or engagement outcomes. If a value can't be retrieved, insert a clearly-marked `[confirm: …]` placeholder.
 3. **Resolve, don't guess.** Every person → real directory email before use. Every account → real MSX record.
 4. Save all deliverables under one root folder (default: `./Mark-Franco-Hub/`) in subfolders `One-Pagers/`, `Draft-Emails/`, `Presentation/`, `_Account-Data/`.
@@ -73,12 +73,12 @@ Gather everything before building. Run these in parallel where possible:
 
 ## 3️⃣ EXECUTE — do the work
 - **E1. One-Pagers/** — save the collected App Innovation one-pagers + template, plus an `_INDEX.md` (file, author/last-editor, source link).
-- **E2. Draft-Emails/** — create **one draft per priority account** (drafts only), addressed To the resolved **AE + ATS**, personalized greeting + the account's "next step" note. Body = the three sections in the Email Spec.
+- **E2. Draft-Emails/** — create **one draft per priority account** (drafts only), addressed To the resolved **AE + ATS**, personalized greeting + the account's "next step" note. Body = the three sections in the Email Spec. Save each draft as an `.html` file in `Draft-Emails/` **and** create the matching draft in the user's **Outlook Drafts folder** via the mail tool's `CreateDraftMessage` (To = resolved AE + ATS emails, Subject per the Email Spec, contentType = HTML). This is drafts-only — never send. If an AE/ATS email is an unresolved `[confirm: …]` placeholder, omit that invalid recipient from the Outlook draft's To line and add a highlighted "before sending, add {name}" note at the top of the body so the user completes it. If the mail tool is unavailable or times out, fall back to the HTML files, log it in `run-log.md`, and tell the user the Outlook drafts still need to be created.
 - **E3. Presentation/** — build the 2-slide PPTX (spec below).
 - **E4. _Account-Data/** — write the consolidated workbook (account, segment, TPID, pipeline, AE+email, ATS+email, next step) and the SE roster.
 
 ## 4️⃣ VERIFY — check it against the goal
-- ✅ No email was sent (all items are drafts).
+- ✅ No email was sent (all items are drafts). Each account has **both** an HTML file in `Draft-Emails/` **and** a corresponding draft in the Outlook Drafts folder (verify via the mail tool's draft search). If the mail tool was unavailable, this is logged and flagged to the user.
 - ✅ Every draft's To = real AE + ATS emails; greeting personalized; 3 sections present; opportunities filled from MSX (or flagged).
 - ✅ Customer-outcomes section has exactly **one CEHUB outcome per architect**, each traceable to a CEHUB record.
 - ✅ One-pagers present and indexed; deck renders (convert slides → images and eyeball them).

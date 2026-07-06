@@ -1,0 +1,1967 @@
+[
+  {
+    "customer_name": "EMPLOYMENT AND SOCIAL DEVELOPMENT CANADA",
+    "account_number": "1+77RS+55",
+    "tpid": 815561,
+    "last_engagement_date": "2050-01-01",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "ESDC - Labor Program would like to evaluate AI options for Employment Equity Tool",
+        "start_date": "2050-01-01",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canadian Tire Corp",
+    "account_number": "1+77RS+56",
+    "tpid": 604121,
+    "last_engagement_date": "2050-01-01",
+    "engagement_count": 5,
+    "engagements": [
+      {
+        "name": "Canadian Tire Corp - ARO Tech Briefing with Red Hat",
+        "start_date": "2050-01-01",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "Canadian Tire Corp - ARBBot Rapid Prototype 2 day (follow up)",
+        "start_date": "2026-06-09",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Canadian Tire Corp - ARBBot Architecture Design 2 (follow up)",
+        "start_date": "2026-05-19",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "Canadian Tire Corp - FinServ Agentic AI  (follow up)",
+        "start_date": "2026-03-09",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "Canadian Tire Corp - ARBBot Envisioning (follow up)",
+        "start_date": "2026-03-04",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Finastra",
+    "account_number": "11-2Q60K",
+    "tpid": 8095072,
+    "last_engagement_date": "2050-01-01",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Finastra - Finance RAG design",
+        "start_date": "2050-01-01",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "Finastra - AI Agentic framework to ensure compliance of architecture documents (follow up)",
+        "start_date": "2025-01-16",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "OMERS",
+    "account_number": "11-5DXTV",
+    "tpid": 4867765,
+    "last_engagement_date": "2050-01-01",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "OMERS - AI in Investments Analysis Prototype (follow up)",
+        "start_date": "2050-01-01",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "OMERS - Enterprise Indexer (follow up)",
+        "start_date": "2025-01-30",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "ENVIRONMENTAL SYSTEMS RESEARCH INSTITUTE INC",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-09-03",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "ENVIRONMENTAL SYSTEMS RESEARCH INSTITUTE INC - Design Session (follow up)",
+        "start_date": "2026-09-03",
+        "status": "Confirmed",
+        "format": "In-Person"
+      },
+      {
+        "name": "ENVIRONMENTAL SYSTEMS RESEARCH INSTITUTE INC - Copy of ESRI Canada Architecture Design Meeting ",
+        "start_date": "2025-04-01",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "ENVIRONMENTAL SYSTEMS RESEARCH INSTITUTE INC",
+    "account_number": "11-EZ2X",
+    "tpid": 624466,
+    "last_engagement_date": "2026-09-02",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "ENVIRONMENTAL SYSTEMS RESEARCH INSTITUTE INC - Solution Envisioning",
+        "start_date": "2026-09-02",
+        "status": "Confirmed",
+        "format": "In-Person"
+      },
+      {
+        "name": "ENVIRONMENTAL SYSTEMS RESEARCH INSTITUTE INC - Architecture Design Meeting",
+        "start_date": "2025-03-31",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Health Canada",
+    "account_number": "1+77RS+126",
+    "tpid": 1276116,
+    "last_engagement_date": "2026-08-18",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Health Canada - Oral Health Branch - AI Envisioning Session",
+        "start_date": "2026-08-18",
+        "status": "Qualified",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Ontario Power Generation Inc",
+    "account_number": "1+77RS+184",
+    "tpid": 594995,
+    "last_engagement_date": "2026-08-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Ontario Power Generation Inc - Solutioning Envisioning ARBBot",
+        "start_date": "2026-08-11",
+        "status": "Qualified",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Hub-Toronto Travel Time Block",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-07-29",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Hub-Toronto Travel Time Block",
+        "start_date": "2026-07-29",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Constellation Software",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-29",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Constellation Software - Solution Envisioning",
+        "start_date": "2026-06-29",
+        "status": "Ready",
+        "format": "In-Person"
+      },
+      {
+        "name": "Constellation Software - AI 4-Pillar Sessions with GM & Team",
+        "start_date": "2026-03-31",
+        "status": "TBR",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "HUB",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-26",
+    "engagement_count": 6,
+    "engagements": [
+      {
+        "name": "HUB - FY26 June Innovation Day - TOR",
+        "start_date": "2026-06-26",
+        "status": "Confirmed",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - Era of AI - NetApp Mar FY26 - TOR",
+        "start_date": "2026-03-12",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - Era of AI Feb FY26 - Passkey Demo - TOR",
+        "start_date": "2026-02-05",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - FY26 Jan Innovation Day - TOR",
+        "start_date": "2026-01-23",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - Era of AI - MCP Nov FY26 - TOR",
+        "start_date": "2025-11-18",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - Era of AI Feb 2025 - Agent Day - TOR",
+        "start_date": "2025-02-20",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Intact Financial Corporation",
+    "account_number": "1-SLBQEG",
+    "tpid": 6233410,
+    "last_engagement_date": "2026-06-25",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Intact Financial Corporation - AI Architect Agent Envisioning",
+        "start_date": "2026-06-25",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "PointClickCare Technologies Inc",
+    "account_number": "1-ANG5IP",
+    "tpid": 18992441,
+    "last_engagement_date": "2026-06-24",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "PointClickCare Technologies Inc - MCP Architecture Session (follow up)",
+        "start_date": "2026-06-24",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "PointClickCare Technologies Inc - Design Session",
+        "start_date": "2026-06-02",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Hydro One Inc",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-17",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Hydro One Inc - Agentic AI Rapid Prototype (follow up)",
+        "start_date": "2026-06-17",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Innocap",
+    "account_number": "7-NCSIZCVJH",
+    "tpid": 104494446,
+    "last_engagement_date": "2026-06-16",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Innocap - Data Quality for Portfolio Reporting (follow up)",
+        "start_date": "2026-06-16",
+        "status": "TBR",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Hydro One",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Hydro One - Agentic AI Design Session (follow up)",
+        "start_date": "2026-06-11",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "QUEBECOR INC",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-04",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "QUEBECOR INC - Videotron NOC - Network & Storage Design Session",
+        "start_date": "2026-06-04",
+        "status": "Cancelled",
+        "format": "Virtual"
+      },
+      {
+        "name": "QUEBECOR INC - Roaming Invoicing Reconciliation Rapid Prototype Use Case #2",
+        "start_date": "2026-02-11",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "QUEBECOR INC - Roaming Invoicing Reconciliation Design Session",
+        "start_date": "2026-02-06",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "QUEBECOR INC",
+    "account_number": "11-5K0Z",
+    "tpid": 604545,
+    "last_engagement_date": "2026-06-04",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "QUEBECOR INC - Videotron NOC - AI Network Operation Agent Envisioning",
+        "start_date": "2026-06-04",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "QUEBECOR INC - Roaming Invoicing Reconciliation Rapid Prototype Use Case #1",
+        "start_date": "2026-02-10",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "EAI",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-03",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "EAI - Magna International - Multi\u2011Agent/Legal Scenario Design Session (follow up)",
+        "start_date": "2026-06-03",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "EAI - Magna International - Microsoft Fabric for Finance: Rapid Prototype Day 2 (follow up)",
+        "start_date": "2026-05-20",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "EAI - Magna International - Microsoft Fabric for Finance: Rapid Prototype Day 1 (follow up)",
+        "start_date": "2026-04-30",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "PointClickCare Technologies Inc -Rapid Prototype",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-06-03",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "PointClickCare Technologies Inc -Rapid Prototype",
+        "start_date": "2026-06-03",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "World Vision Canada",
+    "account_number": "11-4L9FJ",
+    "tpid": 942694,
+    "last_engagement_date": "2026-05-28",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "World Vision Canada - AI Innovation Hub: QA Risk Detection & Secure Child Image AI",
+        "start_date": "2026-05-28",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Banque Nationale Du Canada",
+    "account_number": "1+77RS+36",
+    "tpid": 1218579,
+    "last_engagement_date": "2026-05-27",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Banque Nationale Du Canada - ARBBot Problem Stat",
+        "start_date": "2026-05-27",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Constellation Software",
+    "account_number": "1-1C9FMDT",
+    "tpid": 696563,
+    "last_engagement_date": "2026-05-13",
+    "engagement_count": 8,
+    "engagements": [
+      {
+        "name": "Constellation Software - Rapid Prototype CSI Company 4 (follow up)",
+        "start_date": "2026-05-13",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Rapid Prototype CSI Company 3 (follow up)",
+        "start_date": "2026-05-12",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Rapid Prototype CSI Company 2 (follow up)",
+        "start_date": "2026-05-07",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Rapid Prototype CSI Company 1 (follow up)",
+        "start_date": "2026-05-06",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Design Session CSI Company 4 (follow up)",
+        "start_date": "2026-05-05",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "Constellation Software - Design Session CSI Company 3 (follow up)",
+        "start_date": "2026-05-05",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Design Session CSI Company 2 (follow up)",
+        "start_date": "2026-04-02",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Design Session CSI Company 1 (follow up)",
+        "start_date": "2026-04-02",
+        "status": "TBR",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "City of Mississauga",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-12",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "City of Mississauga - 311 Modernization Rapid Prototype (follow up)",
+        "start_date": "2026-05-12",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "City of Mississauga - 311 Modernization Design Session (follow up)",
+        "start_date": "2026-04-16",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Hub-Toronto",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-07",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Hub-Toronto - Microsoft Certified: Azure Developer (AZ-204) Training",
+        "start_date": "2026-05-07",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "ENBRIDGE INC",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-05",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "ENBRIDGE INC - Customer Care Agent - Rapid Prototype (follow up)",
+        "start_date": "2026-05-05",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "ENBRIDGE INC - Customer Care Agent - Design Session (follow up)",
+        "start_date": "2026-02-19",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "ENBRIDGE INC - Copy of ENBRIDGE INC - Customer Care Agent - Rapid Prototype (follow up) ",
+        "start_date": "2026-02-19",
+        "status": "Cancelled",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Public Services and Procurement Canada",
+    "account_number": "1+77RS+71",
+    "tpid": 1300695,
+    "last_engagement_date": "2026-05-04",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Public Services and Procurement Canada - Architecture design AI Strategy in Ottawa (follow up)",
+        "start_date": "2026-05-04",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "Public Services and Procurement Canada - Automation using Azure AI / Content Understanding",
+        "start_date": "2025-11-20",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Magna International",
+    "account_number": "1+77RS+152",
+    "tpid": 1276180,
+    "last_engagement_date": "2026-04-15",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "EAI - Magna International - Microsoft Fabric for Finance: Design Session",
+        "start_date": "2026-04-15",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "MongoDB Partner Event",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-04-14",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "MongoDB Partner Event",
+        "start_date": "2026-04-14",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Equitable Bank",
+    "account_number": "1-141I78",
+    "tpid": 2803882,
+    "last_engagement_date": "2026-04-14",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Equitable Bank - Agentic Optimization strategy (follow up)",
+        "start_date": "2026-04-14",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Transport Canada",
+    "account_number": "1+77RS+212",
+    "tpid": 524428,
+    "last_engagement_date": "2026-04-08",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Transport Canada - Grants and Contributions - Phase 2 (follow up)",
+        "start_date": "2026-04-08",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Global Affairs Canada",
+    "account_number": "1+77RS+240",
+    "tpid": 1221278,
+    "last_engagement_date": "2026-04-07",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Global Affairs Canada - Embassy",
+        "start_date": "2026-04-07",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Hydro One Inc",
+    "account_number": "1N-2KJ0P",
+    "tpid": 10279673,
+    "last_engagement_date": "2026-04-01",
+    "engagement_count": 4,
+    "engagements": [
+      {
+        "name": "Hydro One Inc - AI Business Envisioning - Governance & Security (follow up)",
+        "start_date": "2026-04-01",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Hydro One Inc - AI Rapid Prototype (follow up)",
+        "start_date": "2026-03-10",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "Hydro One Inc - AI Architecture Design Session (follow up)",
+        "start_date": "2026-02-26",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "Hydro One Inc - AI Use Case Prioritization",
+        "start_date": "2026-02-04",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "City of Mississauga",
+    "account_number": "1+78EZ+4",
+    "tpid": 1405235,
+    "last_engagement_date": "2026-04-01",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "City of Mississauga - 311 Modernization Solution Envisioning",
+        "start_date": "2026-04-01",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "THE MANUFACTURERS LIFE INSURANCE COMPANY USA",
+    "account_number": "1+77RS+243",
+    "tpid": 1312245,
+    "last_engagement_date": "2026-03-26",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "THE MANUFACTURERS LIFE INSURANCE COMPANY USA - GWAM - GitHub Coding Agent ",
+        "start_date": "2026-03-26",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "THE MANUFACTURERS LIFE INSURANCE COMPANY USA - Virtual Advisory",
+        "start_date": "2026-03-24",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Constellation Software",
+    "account_number": "1-4BF9TO",
+    "tpid": 2045915,
+    "last_engagement_date": "2026-03-24",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Constellation Software - AI 4-Pillar Sessions with C-Level Team",
+        "start_date": "2026-03-24",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Constellation Software - Azure Day",
+        "start_date": "2025-04-01",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Husky Injection Moldings",
+    "account_number": "1+77RS+284",
+    "tpid": 935174,
+    "last_engagement_date": "2026-03-03",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Husky Injection Moldings - Data Strategy with Fabric",
+        "start_date": "2026-03-03",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Air Canada",
+    "account_number": "1+77RS+52",
+    "tpid": 970123,
+    "last_engagement_date": "2026-03-02",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Air Canada - Air Canada - Contract Management - Accelerator Agent (Follow up) ",
+        "start_date": "2026-03-02",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Air Canada - Data & AI Technology Briefing",
+        "start_date": "2025-01-23",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "LITENS AUTOMOTIVE",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-02-24",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "LITENS AUTOMOTIVE - Engineering Rapid Prototype Session (follow up)",
+        "start_date": "2026-02-24",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "LITENS AUTOMOTIVE",
+    "account_number": "6-AOLUJGHHX",
+    "tpid": 1276180,
+    "last_engagement_date": "2026-02-18",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "LITENS AUTOMOTIVE - Engineering Design Session (follow up)",
+        "start_date": "2026-02-18",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "Litens Automotive Partnership - Accelerating Engineering with Copilot(s) incl. GitHub",
+        "start_date": "2026-01-22",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Meridian Credit Union",
+    "account_number": "11-X0I5",
+    "tpid": 1459910,
+    "last_engagement_date": "2026-02-12",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Meridian Credit Union - Fraud & AML Agents",
+        "start_date": "2026-02-12",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Roper Technologies, Inc.",
+    "account_number": "1-R19MOV",
+    "tpid": 6432698,
+    "last_engagement_date": "2026-02-03",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "Roper - LoadLink - Rapid Prototype for Gen AI Use Case 2",
+        "start_date": "2026-02-03",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "Roper Technologies, Inc. - Roper LoadLink - Design Session Gen AI Use Case II (follow up",
+        "start_date": "2026-01-13",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Roper Technologies, Inc. - Roper/Loadilnk Architecture Design Session (follow up)",
+        "start_date": "2025-10-30",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Second Harvest",
+    "account_number": "9-VCPGXP3IC",
+    "tpid": 45138781,
+    "last_engagement_date": "2026-01-29",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Community Event - Second Harvest - App White Label",
+        "start_date": "2026-01-29",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Seneca College of Applied Arts and Technology",
+    "account_number": "11-3S3B1",
+    "tpid": 605522,
+    "last_engagement_date": "2026-01-28",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "HUB - Era of AI - Higher Ed - Leveraging Agentic AI for Community Colleges Jan FY26 TOR",
+        "start_date": "2026-01-28",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Northbridge Financial Corporation",
+    "account_number": "6-5VKRFCUAH",
+    "tpid": 17419365,
+    "last_engagement_date": "2026-01-23",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Northbridge Financial Corporation - Copilot Studio integration with Foundry",
+        "start_date": "2026-01-23",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Saputo Group Inc.",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-01-12",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Saputo Group Inc. - Neilson Data Use Case II Rapid Prototype (follow up)",
+        "start_date": "2026-01-12",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "Saputo Group Inc. - Use Case - Nielsen Data Agent & Logistics Audit Design Session",
+        "start_date": "2025-12-05",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Power Corporation of Canada",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-01-07",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Power Corporation of Canada - Canada Life - Knowledge Assistant Prototype Session (follow up)",
+        "start_date": "2026-01-07",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Saputo Group Inc",
+    "account_number": "11-40S13",
+    "tpid": 937097,
+    "last_engagement_date": "2025-12-16",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Saputo Group Inc. - DOW Chemical Use Case I (follow up)",
+        "start_date": "2025-12-16",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "RBC Agentic AI Session",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-12-12",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "RBC Agentic AI Session",
+        "start_date": "2025-12-12",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Power Corporation of Canada",
+    "account_number": "1+77RS+150",
+    "tpid": 938173,
+    "last_engagement_date": "2025-12-10",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "Canada Life - Knowledge Assistant Design Session (follow up)",
+        "start_date": "2025-12-10",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "Canada Life - AIX Migration to Azure",
+        "start_date": "2025-12-09",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "Canada Life - KAT Agent Design Session",
+        "start_date": "2025-11-06",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canadian Imperial Bank of Commerce",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-11-27",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Canadian Imperial Bank of Commerce - Agentic Use Cases Solution Envisioning (follow up)",
+        "start_date": "2025-11-27",
+        "status": "Cancelled",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "City of Toronto",
+    "account_number": "11-5SYH",
+    "tpid": 1371245,
+    "last_engagement_date": "2025-11-26",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "City of Toronto - Toronto Transit Commission - Vision AI ",
+        "start_date": "2025-11-26",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Roper Technologies, Inc.",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-11-17",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Roper Technologies, Inc. - Roper/Loadlink Rapid Prototype (follow up)",
+        "start_date": "2025-11-17",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Government of Ontario",
+    "account_number": "1-SJBBVQ",
+    "tpid": 815467,
+    "last_engagement_date": "2025-11-13",
+    "engagement_count": 4,
+    "engagements": [
+      {
+        "name": "Government of Ontario - Architecture Design on Enterprise-Wide Permitting Solution (follow up)",
+        "start_date": "2025-11-13",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Government of Ontario - OPS - Developer Experience ",
+        "start_date": "2025-08-14",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Government of Ontario: Microservices Architecture (follow up)",
+        "start_date": "2025-06-12",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Government of Ontario - CND Confidential ",
+        "start_date": "2025-05-06",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "York University",
+    "account_number": "11-3TTJM",
+    "tpid": 942729,
+    "last_engagement_date": "2025-11-12",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "HUB - Era of AI - HiEd AI Solution Envisioning with AI Agentic Frameworks - Nov FY26 - TOR",
+        "start_date": "2025-11-12",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Fairstone Bank of Canada",
+    "account_number": "1-6167LU",
+    "tpid": 4552140,
+    "last_engagement_date": "2025-11-05",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Home Trust Co - HTC + Fairstone Data AI Transformation ",
+        "start_date": "2025-11-05",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "HUB -Airlift Hold",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-11-04",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "HUB -Airlift Hold - TOR",
+        "start_date": "2025-11-04",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Government of Ontario",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-10-29",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Government of Ontario - MLITSD - AI for intake solutions Pro-code Design Session (follow up)",
+        "start_date": "2025-10-29",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Linamar Corp",
+    "account_number": "1+77RS+149",
+    "tpid": 1877546,
+    "last_engagement_date": "2025-10-15",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Linamar Corp - Agents (Copilot Studio & Foundry)",
+        "start_date": "2025-10-15",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "BDO Canada",
+    "account_number": "1+77RS+41",
+    "tpid": 1123868,
+    "last_engagement_date": "2025-10-02",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "BDO Canada - Development Platform Modernization",
+        "start_date": "2025-10-02",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "BDO Canada - Client Digital Experience",
+        "start_date": "2025-07-22",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canada AI Tour",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-10-01",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Canada AI Tour",
+        "start_date": "2025-10-01",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Government of New Brunswick Solution Envisioning",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-09-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Government of New Brunswick Solution Envisioning",
+        "start_date": "2025-09-11",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "AON CORPORATION",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-09-03",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "AON CORPORATION - PathWise on Azure Migration Prototype (follow up)",
+        "start_date": "2025-09-03",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "AON CORPORATION - PathWise on Azure Migration (follow up)",
+        "start_date": "2025-09-02",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "AON CORPORATION - PathWise on Azure Migration (follow up)",
+        "start_date": "2025-07-15",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canadian Imperial Bank of Commerce",
+    "account_number": "1+77RS+67",
+    "tpid": 971518,
+    "last_engagement_date": "2025-08-27",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Canadian Imperial Bank of Commerce - Legacy Modernization using GenAI",
+        "start_date": "2025-08-27",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "FY26 Hub Canada",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-08-13",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "FY26 Hub Canada - Architect Readiness",
+        "start_date": "2025-08-13",
+        "status": "Confirmed",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Microsoft Canada",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-07-14",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Microsoft Canada - Copy of FY26 Hub Canada - Architect Readiness ",
+        "start_date": "2025-07-14",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Bombardier Inc",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-07-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Bombardier Inc - Gen AI Day 2",
+        "start_date": "2025-07-11",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Government of Ontario: Citizen facing portal prototype (follow up)",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-07-08",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Government of Ontario: Citizen facing portal prototype (follow up)",
+        "start_date": "2025-07-08",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "OTPP",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-07-03",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "OTPP - Azure Monitor Use Case with Personas",
+        "start_date": "2025-07-03",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Industrielle Alliance",
+    "account_number": "1+77RS+136",
+    "tpid": 2218124,
+    "last_engagement_date": "2025-06-26",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Industrielle Alliance - Mainframe Migration",
+        "start_date": "2025-06-26",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Industrielle Alliance",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-06-12",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Industrielle Alliance - Copy of Industrielle Alliance - Mainframe Migration ",
+        "start_date": "2025-06-12",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Government of Ontario: DARP, AKS & APIM (follow up)",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-06-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Government of Ontario: DARP, AKS & APIM (follow up)",
+        "start_date": "2025-06-11",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Bell Canada Inc",
+    "account_number": "1+77RS+42",
+    "tpid": 845144,
+    "last_engagement_date": "2025-06-10",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Bell Canada Inc - Bell Automation at Scale ",
+        "start_date": "2025-06-10",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Government of Ontario: Entra ID (follow up)",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-06-04",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Government of Ontario: Entra ID (follow up)",
+        "start_date": "2025-06-04",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "CAE Inc",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-06-03",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "CAE Inc - App Innovation & Fabric Overview Session",
+        "start_date": "2025-06-03",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "CAE Inc",
+    "account_number": "1+77RS+48",
+    "tpid": 622473,
+    "last_engagement_date": "2025-06-02",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "CAE Inc - Data Session",
+        "start_date": "2025-06-02",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Environment Canada",
+    "account_number": "1+77RS+102",
+    "tpid": 619747,
+    "last_engagement_date": "2025-06-02",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Environment Canada - EnviroGenAI AI Design Choices",
+        "start_date": "2025-06-02",
+        "status": "TBR",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "AON CORPORATION",
+    "account_number": "1+78XD+2686",
+    "tpid": 641221,
+    "last_engagement_date": "2025-05-28",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "AON CORPORATION - PathWise on Azure Migration",
+        "start_date": "2025-05-28",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "EMPLOYMENT AND SOCIAL DEVELOPMENT CANADA",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-05-22",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "EMPLOYMENT AND SOCIAL DEVELOPMENT CANADA - Equi'Vision AI Assistant Prototype Session (follow up)",
+        "start_date": "2025-05-22",
+        "status": "Cancelled",
+        "format": "Virtual"
+      },
+      {
+        "name": "EMPLOYMENT AND SOCIAL DEVELOPMENT CANADA - Equi'Vision AI Assistant Design Session (follow up)",
+        "start_date": "2025-03-17",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "GHD Services Pty Ltd",
+    "account_number": "2Q-KZ1VN",
+    "tpid": 1459839,
+    "last_engagement_date": "2025-05-21",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "GHD Services Pty Ltd - Citizen Services AI Agent",
+        "start_date": "2025-05-21",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "BANK OF MONTREAL",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-05-14",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "BANK OF MONTREAL - UAT Document Generation (follow up)",
+        "start_date": "2025-05-14",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "BANK OF MONTREAL - UAT Document Generation (follow up)",
+        "start_date": "2025-05-13",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Mccain Foods Ltd",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-05-06",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Mccain Foods Ltd - CoPilot Studio with Semantic Kernel & Databricks II (follow up)",
+        "start_date": "2025-05-06",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "Mccain Foods Ltd - CoPilot Studio with Semantic Kernel & Databricks (follow up)",
+        "start_date": "2025-04-23",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "WSP Global Inc.",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-05-01",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "WSP Global Inc. - MVP Prototype (follow up)",
+        "start_date": "2025-05-01",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "WSP Global Inc. - Azure & App Services: functions, key vault & VNet (follow up)",
+        "start_date": "2025-04-30",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "WSP Global Inc. - AWS Infra & Cosmo DB (follow up)",
+        "start_date": "2025-04-29",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Ontario Teachers' Pension Plan",
+    "account_number": "11+190-HD",
+    "tpid": 1079254,
+    "last_engagement_date": "2025-04-10",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Ontario Teachers' Pension Plan - Azure Monitor",
+        "start_date": "2025-04-10",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Healthcare of Ontario Pension Plan",
+    "account_number": "11-V1DW",
+    "tpid": 1071537,
+    "last_engagement_date": "2025-04-03",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Healthcare of Ontario Pension Plan - Secure Messages Sentiment Analysis",
+        "start_date": "2025-04-03",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "BANK OF MONTREAL",
+    "account_number": "6-CVTQSX5UQ",
+    "tpid": 522647,
+    "last_engagement_date": "2025-03-31",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "BANK OF MONTREAL - UAT Document Generation",
+        "start_date": "2025-03-31",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Aphria Inc",
+    "account_number": "9-POBWVAYOM",
+    "tpid": 29494440,
+    "last_engagement_date": "2025-03-27",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Aphria Inc./Tilray - Accelerating Business and AI Transformation",
+        "start_date": "2025-03-27",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Mccain Foods Ltd",
+    "account_number": "1+77RS+158",
+    "tpid": 1079125,
+    "last_engagement_date": "2025-03-26",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Mccain Foods Ltd - CoPilot, Agents, Azure OpenAI",
+        "start_date": "2025-03-26",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Secure Waste Infrastructure Corp.",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-03-25",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Secure Waste Infrastructure Corp. - AI Use Case Prioritization (follow up)",
+        "start_date": "2025-03-25",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Internal meeting with GPS to show how the Innovation hub can be leveraged by Americas Partners",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-03-24",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Internal meeting with GPS to show how the Innovation hub can be leveraged by Americas Partners",
+        "start_date": "2025-03-24",
+        "status": "Cancelled",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "BDO",
+    "account_number": "1-2PQE8E",
+    "tpid": 2756661,
+    "last_engagement_date": "2025-03-19",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "BDO Canada- Architecture Design Session Portal",
+        "start_date": "2025-03-19",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "City of Surrey",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-03-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "City of Surrey - Cloud Strategy Design Session (follow up)",
+        "start_date": "2025-03-11",
+        "status": "Cancelled",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "University of Toronto",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-03-05",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "University of Toronto - Legacy Code Modernization Project - OpenAI Use Rapid Prototype (follow up)",
+        "start_date": "2025-03-05",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "University of Toronto - Legacy Code Modernization Project - OpenAI Use Case #2 (follow up)",
+        "start_date": "2025-01-15",
+        "status": "Cancelled",
+        "format": "Hybrid"
+      },
+      {
+        "name": "University of Toronto - Legacy Code Modernization Project - OpenAI Use Case (follow up)",
+        "start_date": "2025-01-15",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Empire Financial Group",
+    "account_number": "1+78EZ+7",
+    "tpid": 954232,
+    "last_engagement_date": "2025-03-03",
+    "engagement_count": 4,
+    "engagements": [
+      {
+        "name": "Empire Financial Group - Rapid Prototype (follow up)",
+        "start_date": "2025-03-03",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "Empire Financial Group - Agentic AI Lunch & Learn (follow up)",
+        "start_date": "2025-03-03",
+        "status": "Cancelled",
+        "format": "Virtual"
+      },
+      {
+        "name": "Empire Financial Group - ADS Sales Assistant (follow up)",
+        "start_date": "2025-02-26",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "Empire Financial Group - CI CD Pipeline ADS  (follow up)",
+        "start_date": "2025-02-04",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Workplace Safety and Insurance Board",
+    "account_number": "11-5Y20P",
+    "tpid": 1288543,
+    "last_engagement_date": "2025-02-27",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Workplace Safety and Insurance Board - AI Agents Discussion",
+        "start_date": "2025-02-27",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "City of Surrey",
+    "account_number": "11-2UQS0",
+    "tpid": 603818,
+    "last_engagement_date": "2025-02-25",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "City of Surrey - Cloud Strategy Envisioning",
+        "start_date": "2025-02-25",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "BlueCrest Inc",
+    "account_number": "9-UQ7HRPCU4",
+    "tpid": 52003397,
+    "last_engagement_date": "2025-02-19",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "DMT Solutions Global Corporation - Cosmos DB Follow up ",
+        "start_date": "2025-02-19",
+        "status": "Complete",
+        "format": "Virtual"
+      },
+      {
+        "name": "DMT Solutions Global Corporation - Architecture Design session (follow up)",
+        "start_date": "2025-01-14",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "SHARED SERVICES CANADA",
+    "account_number": "6-7OW2BBB6U",
+    "tpid": 16920326,
+    "last_engagement_date": "2025-02-18",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "SHARED SERVICES CANADA - Solution design for cost management automated workflows in multi-client environment",
+        "start_date": "2025-02-18",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "WSP Global Inc.",
+    "account_number": "26-38MAX",
+    "tpid": 2831650,
+    "last_engagement_date": "2025-02-13",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "WSP Global Inc. - Weather Business Migration",
+        "start_date": "2025-02-13",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "FY25 Tech Ready",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-02-10",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "FY25 Tech Ready",
+        "start_date": "2025-02-10",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Four Seasons Hotel",
+    "account_number": "11-AB89",
+    "tpid": 1123913,
+    "last_engagement_date": "2025-02-06",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Four Seasons Hotel - Enterprise Systems Integration Architectural Envisioning",
+        "start_date": "2025-02-06",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Royal Bank Of Canada",
+    "account_number": "9-TWA6VAKDD",
+    "tpid": 521024,
+    "last_engagement_date": "2025-01-31",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Royal Bank Of Canada - Project Exodus",
+        "start_date": "2025-01-31",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "RBC FINANCIAL GROUP",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-01-29",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "RBC FINANCIAL GROUP - USCM - Art Of The Possible (Customer/MSFT Session)",
+        "start_date": "2025-01-29",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "OMERS",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-01-29",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "OMERS - Security Trimmer (follow up)",
+        "start_date": "2025-01-29",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "RBC FINANCIAL GROUP",
+    "account_number": "1+77RS+211",
+    "tpid": 521024,
+    "last_engagement_date": "2025-01-28",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "RBC FINANCIAL GROUP - USCM - Art Of The Possible ",
+        "start_date": "2025-01-28",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Finastra",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-01-20",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Finastra - AI Agentic framework Rapid Prototype (follow up)",
+        "start_date": "2025-01-20",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Vena Solutions",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2025-01-13",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Vena Solutions - Design+PoC on their App integration for Teams and Co-Pilot (follow up)",
+        "start_date": "2025-01-13",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  }
+]

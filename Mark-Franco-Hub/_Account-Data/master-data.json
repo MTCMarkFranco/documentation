@@ -1,0 +1,138 @@
+{
+  "generated": "2026-06-27",
+  "owner": { "name": "Mark Franco", "title": "Sr Solution Engineer, Americas Innovation Hub", "email": "Mark.Franco@microsoft.com" },
+  "one_pager_library": "https://microsoft.sharepoint.com/teams/HubTechCommunity/Shared%20Documents/FY27%20Americas%20Hub%20Offerings/POD%207/One%20Pagers/",
+  "one_pagers": [
+    "Modernize with Confidence — App Innovation One-Pager",
+    "Modernize Your Applications with Agentic AI — App Innovation One-Pager",
+    "Microsoft Innovation Hub — Engagement One-Pagers (Hub Offerings, full menu)"
+  ],
+  "engagement_cadence": "Recurring sync \u2192 joint account planning \u2192 map a Hub one-pager to a top opportunity \u2192 run the engagement (envisioning \u2192 architecture \u2192 rapid prototype \u2192 hackathon) \u2192 record the outcome in MSX.",
+  "architect_outcomes": [
+    { "architect": "Mark Franco", "customer": "Hydro One Inc.", "outcome": "Agentic AI Rapid Prototype (envisioning \u2192 design \u2192 rapid prototype journey)", "status": "Complete (2026-06-17)", "solution_area_nsat": "[confirm: solution area / NSAT in CEHUB]" },
+    { "architect": "Ansar Mohammed", "customer": "Bombardier Inc.", "outcome": "Architecture Design Session (ADS)", "status": "Complete (2026-06-17)", "solution_area_nsat": "[confirm: solution area / NSAT in CEHUB]" },
+    { "architect": "Carlos Rocchetti", "customer": "Magna International", "outcome": "M365 Copilot & SAP Integration engagement", "status": "Complete (2026-06-24)", "solution_area_nsat": "[confirm: solution area / NSAT in CEHUB]" },
+    { "architect": "Jordan Dowdall", "customer": "Scotiabank", "outcome": "Agent Day \u2014 Retail Banking Operations (leadership agentic AI workshop)", "status": "Complete (2026-05-27)", "solution_area_nsat": "[confirm: solution area / NSAT in CEHUB]" },
+    { "architect": "Winner Emeto", "customer": "Brookfield Asset Management", "outcome": "IT-in-a-Box engagement", "status": "Complete (2026-06-10)", "solution_area_nsat": "[confirm: solution area / NSAT in CEHUB]" }
+  ],
+  "se_roster": {
+    "manager": "Laurie Roseland-Barnes",
+    "members": [
+      { "name": "Mark Franco", "title": "Sr Solution Engineer Hub", "email": "Mark.Franco@microsoft.com" },
+      { "name": "Ansar Mohammed", "title": "Sr Solution Engineer Hub", "email": "ansarm@microsoft.com" },
+      { "name": "Carlos Rocchetti", "title": "Sr Solution Engineer Hub", "email": "Carlos.Rocchetti@microsoft.com" },
+      { "name": "Jordan Dowdall", "title": "Sr Solution Engineer", "email": "jdowdall@microsoft.com" },
+      { "name": "Winner Emeto", "title": "Sr Solution Engineer", "email": "wemeto@microsoft.com" }
+    ]
+  },
+  "new_demos_experiences": [
+    "Agentic AI rapid-prototype experiences (Copilot Studio multi-agent + Azure AI Foundry)",
+    "M365 Copilot extensibility & line-of-business agent demos",
+    "App modernization with agentic AI (GitHub Copilot + Azure) hackathons",
+    "Microsoft Fabric for Finance / real-time data rapid prototypes"
+  ],
+  "accounts": [
+    {
+      "account": "BMO", "tpid": "522647", "segment": "Strategic - Commercial (Banking)",
+      "pipeline_usd": "~$97.1M open (85 open opps)",
+      "ae": { "name": "Alex Chan", "email": "alechan@microsoft.com" },
+      "ats": { "name": "Mark Hickson", "email": "markhic@microsoft.com" },
+      "next_step": "Journeys locked in, looking to start one; need to talk to Mark Hickson.",
+      "top_opps": [
+        { "name": "BMO Life \u2013 SIP/SAP/SUP/Data/CoreSuite/DigitalSuite (sapiens SaaS)", "sa": "Cloud and AI Platforms", "rev": "$16.1M" }
+      ],
+      "opp_note": "MSX returned three near-identical 'BMO Life sapiens' records (~$16.1M each) \u2014 likely duplicate/parallel entries; [confirm in MSX: de-dupe top-3]."
+    },
+    {
+      "account": "Constellation Software", "tpid": "2045915", "segment": "Upper Majors - Commercial (IT Services)",
+      "pipeline_usd": "~$39.3M open (343 open opps)",
+      "ae": { "name": "David LeBlanc", "email": "davleb@microsoft.com" },
+      "ats": { "name": "Sandy Ward", "email": "sandyward@microsoft.com" },
+      "next_step": "2nd meeting booked \u2014 show journeys and get buy-in.",
+      "top_opps": [
+        { "name": "FY27 Q4 M(Jun) Ren \u2013 EA Autoload \u2013 Constellation Software", "sa": "AI Business Solutions", "rev": "$14.7M" },
+        { "name": "FY27 Q4 M(Jun) Ren \u2013 EA Autoload \u2013 Constellation Software", "sa": "AI Business Solutions", "rev": "$9.8M" },
+        { "name": "FY27 Q1 M(Jul) Ren \u2013 EAS Autoload \u2013 Constellation Software", "sa": "Renewal autoload", "rev": "$6.5M" }
+      ],
+      "opp_note": ""
+    },
+    {
+      "account": "Government of Ontario", "tpid": "815467", "segment": "Strategic - Public Sector",
+      "pipeline_usd": "~$30.1M open (201 open opps)",
+      "ae": { "name": "Jeremy Boudreau", "email": "jeremy.boudreau@microsoft.com" },
+      "ats": { "name": "Andrew Szekely", "email": "andrew.szekely@microsoft.com" },
+      "next_step": "[confirm: no next-step note on the priority sheet \u2014 propose an intro sync].",
+      "top_opps": [
+        { "name": "FY27 Q4 TUP \u2013 EA \u2013 Centralized Supply Chain Ontario", "sa": "AI Business Solutions", "rev": "$5.6M" },
+        { "name": "FY27 Q4 TUP \u2013 EA \u2013 Centralized Supply Chain Ontario", "sa": "AI Business Solutions", "rev": "$5.6M" },
+        { "name": "FY27 Q1 \u2013 OPS \u2013 M365 BackUp", "sa": "AI Business Solutions", "rev": "$3.9M" }
+      ],
+      "opp_note": ""
+    },
+    {
+      "account": "Metrolinx", "tpid": "13965913", "segment": "Upper Majors - Government (Transport)",
+      "pipeline_usd": "~$8.0M open (59 open opps)",
+      "ae": { "name": "Chris Fortin", "email": "chris.fortin@microsoft.com" },
+      "ats": { "name": "Michael Kay", "email": "michaelkay@microsoft.com" },
+      "next_step": "Initial meeting to be scheduled.",
+      "top_opps": [
+        { "name": "FY27 Q1 \u2013 Metrolinx M365 E7", "sa": "AI Business Solutions", "rev": "$3.4M" },
+        { "name": "FY27 Q2 \u2013 Metrolinx \u2013 W365 Production LXP", "sa": "AI Business Solutions", "rev": "$1.7M" },
+        { "name": "PRESTO bot \u2013 Copilot Studio agentic follow-on", "sa": "AI Business Solutions", "rev": "$0.9M" }
+      ],
+      "opp_note": ""
+    },
+    {
+      "account": "RBC", "tpid": "521024", "segment": "Strategic - Commercial (Banking)",
+      "pipeline_usd": "~$484.6M open (244 open opps)",
+      "ae": { "name": "Aaron Teelucksingh", "email": "aaronte@microsoft.com" },
+      "ats": { "name": "Quyen Pham", "email": "quyenpham@microsoft.com" },
+      "next_step": "Initial meeting to be scheduled.",
+      "top_opps": [
+        { "name": "FY27 \u2013 #KEY \u2013 New Azure MACC", "sa": "Cloud and AI Platforms", "rev": "$550M CAD (~$398M USD base)" },
+        { "name": "FY27 \u2013 RBC \u2013 M365 Copilot \u2013 96k", "sa": "AI Business Solutions", "rev": "$27.0M" },
+        { "name": "RBC \u2013 W365 \u2013 Endpoint Transformation (Perfect Storm)", "sa": "Cloud and AI Platforms", "rev": "$18.6M" }
+      ],
+      "opp_note": "[confirm in MSX: used Canadian parent TPID 521024, not the larger-by-count RBC Europe entity 1540192]."
+    },
+    {
+      "account": "Saputo", "tpid": "937097", "segment": "Upper Majors - Commercial (Consumer Goods)",
+      "pipeline_usd": "~$8.3M open (21 open opps)",
+      "ae": { "name": "Peter Dentico", "email": "peterdentico@microsoft.com" },
+      "ats": { "name": "Michael Beauchamp", "email": "[confirm: directory email \u2014 no Microsoft Canada match found for 'Michael Beauchamp']" },
+      "next_step": "Initial meeting to be scheduled.",
+      "top_opps": [
+        { "name": "FY27 \u2013 Saputo \u2013 Q4 Renewal EAS Autoload", "sa": "AI Business Solutions", "rev": "$9.5M CAD" },
+        { "name": "FY27 \u2013 Saputo \u2013 E7 step up", "sa": "AI Business Solutions", "rev": "$0.69M" },
+        { "name": "FY27 \u2013 Saputo \u2013 Agentic-Innovation \u2013 Power Platform scale", "sa": "AI Business Solutions", "rev": "$0.52M" }
+      ],
+      "opp_note": ""
+    },
+    {
+      "account": "WSIB", "tpid": "1288543", "segment": "Upper Majors - Government (Social Programs)",
+      "pipeline_usd": "~$2.27M open (50 open opps)",
+      "ae": { "name": "Lauren Armstrong", "email": "lauren.armstrong@microsoft.com" },
+      "ats": { "name": "Michael Kay", "email": "michaelkay@microsoft.com" },
+      "next_step": "Account team change in January; restarting engagement.",
+      "top_opps": [
+        { "name": "FY27 \u2013 E7 Anniversary", "sa": "AI Business Solutions", "rev": "$1.38M" },
+        { "name": "FY27 Q2 TUP \u2013 EA \u2013 Workplace Safety and Insurance Board", "sa": "TUP / EA", "rev": "$0.74M" },
+        { "name": "M365 Copilot \u2013 Renewal", "sa": "AI Business Solutions", "rev": "$0.46M" }
+      ],
+      "opp_note": ""
+    },
+    {
+      "account": "WSP", "tpid": "2831650", "segment": "Strategic - Commercial (Other Services)",
+      "pipeline_usd": "~$25.3M open (153 open opps)",
+      "ae": { "name": "Emily Zarlenga", "email": "emily.zarlenga@microsoft.com" },
+      "ats": { "name": "Matthew Rodin", "email": "Matthew.Rodin@microsoft.com" },
+      "next_step": "Work with Matt Rodin to restart the conversation.",
+      "top_opps": [
+        { "name": "Agent 365 + Entra Suite", "sa": "AI Business Solutions", "rev": "$10.9M" },
+        { "name": "FY27 Q3 TUP \u2013 EA \u2013 WSP Global Inc.", "sa": "TUP / EA", "rev": "$6.7M" },
+        { "name": "#GOHUGE #BOLT \u2013 WSP W2W M365 Copilot Large Deal Phase II", "sa": "Cloud and AI Platforms", "rev": "$2.6M" }
+      ],
+      "opp_note": "[confirm: 'Emily Zarlenga' resolved at medium confidence from sheet spelling 'Zarelenga']."
+    }
+  ]
+}

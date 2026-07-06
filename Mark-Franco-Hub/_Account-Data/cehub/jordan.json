@@ -1,0 +1,560 @@
+[
+  {
+    "customer_name": "Medavie Blue Cross",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-10-16",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Medavie Blue Cross - Frontier LOB Use Case",
+        "start_date": "2026-10-16",
+        "status": "Confirmed",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Medavie Blue Cross",
+    "account_number": "1+78EZ+137",
+    "tpid": 2137977,
+    "last_engagement_date": "2026-10-15",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Medavie Blue Cross - Executive Day",
+        "start_date": "2026-10-15",
+        "status": "Confirmed",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "SHARED SERVICES CANADA",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-08-06",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "SHARED SERVICES CANADA - AI-Powered Executive Approval Management Design Session (follow up)",
+        "start_date": "2026-08-06",
+        "status": "Confirmed",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "SHARED SERVICES CANADA",
+    "account_number": "6-7OW2BBB6U",
+    "tpid": 16920326,
+    "last_engagement_date": "2026-07-30",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "SHARED SERVICES CANADA - AI-Powered Executive Approval Management",
+        "start_date": "2026-07-30",
+        "status": "Confirmed",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Power Corporation of Canada",
+    "account_number": "1+77RS+150",
+    "tpid": 938173,
+    "last_engagement_date": "2026-07-23",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Power Corporation of Canada - IGM - AdvisorIQ ",
+        "start_date": "2026-07-23",
+        "status": "Assigned",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "SUN LIFE ASSURANCE COMPANY OF CANADA",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-07-16",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "SUN LIFE ASSURANCE COMPANY OF CANADA - AI Coaching Agent MVP Design Session 2 (follow up)",
+        "start_date": "2026-07-16",
+        "status": "Confirmed",
+        "format": "Hybrid"
+      },
+      {
+        "name": "SUN LIFE ASSURANCE COMPANY OF CANADA - AI Coaching Agent (follow up)",
+        "start_date": "2026-03-19",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Metrolinx",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-07-15",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Metrolinx - HR Business Envisioning",
+        "start_date": "2026-07-15",
+        "status": "Qualified",
+        "format": "In-Person"
+      },
+      {
+        "name": "Metrolinx - Finance Agent Envisioning",
+        "start_date": "2026-07-07",
+        "status": "Ready",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "TD Bank Financial Group",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-07-14",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "TD Bank Financial Group - HR Agent",
+        "start_date": "2026-07-14",
+        "status": "Confirmed",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Magna International",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-07-09",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Magna International - M365 Copilot and SAP Integration Design Session",
+        "start_date": "2026-07-09",
+        "status": "Ready",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "TD Bank Financial Group",
+    "account_number": "1+77RS+248",
+    "tpid": 523863,
+    "last_engagement_date": "2026-07-06",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "TD Bank Financial Group - Solution Envisioning for Wealth Mgmt/Direct Investing use case (follow up)",
+        "start_date": "2026-07-06",
+        "status": "Qualified",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Magna International",
+    "account_number": "1+77RS+152",
+    "tpid": 1276180,
+    "last_engagement_date": "2026-06-24",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Magna International - M365 Copilot and SAP Integration ",
+        "start_date": "2026-06-24",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canadian Tire Corp",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-29",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Canadian Tire Corp - Agentic Inspiration and Ideation for Business Platform Team #2",
+        "start_date": "2026-05-29",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "SCOTIABANK",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-27",
+    "engagement_count": 5,
+    "engagements": [
+      {
+        "name": "SCOTIABANK - Agent Day Scotiabank Retail Banking Operations - Leadership Team #6 (follow up)",
+        "start_date": "2026-05-27",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "SCOTIABANK - Agent Day Scotiabank Retail Banking Operations - Leadership Team #5 (follow up)",
+        "start_date": "2026-05-26",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "SCOTIABANK - Agent Day Scotiabank Retail Banking Operations - Leadership Team #4 (follow up)",
+        "start_date": "2026-05-19",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "SCOTIABANK - Agent Day Scotiabank Retail Banking Operations - Leadership Team #3 (follow up)",
+        "start_date": "2026-04-07",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "SCOTIABANK - Agent Day Scotiabank Retail Banking Operations - Leadership Team #2 (follow up)",
+        "start_date": "2026-04-02",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "The Hatch Group",
+    "account_number": "1+77RS+356",
+    "tpid": 1264084,
+    "last_engagement_date": "2026-05-20",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "The Hatch Group - Copilot Use case Envisioning for Engineering Delivery",
+        "start_date": "2026-05-20",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "HUB",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-20",
+    "engagement_count": 3,
+    "engagements": [
+      {
+        "name": "HUB - Era of AI May FY26 - Sales - TOR",
+        "start_date": "2026-05-20",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - Era of AI - CHRO Redefining Human Resources with Agentic AI - April FY26 - TOR",
+        "start_date": "2026-04-28",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "HUB - Era of AI March FY26 - Finance - TOR",
+        "start_date": "2026-03-05",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canadian Tire Corp",
+    "account_number": "1+77RS+56",
+    "tpid": 604121,
+    "last_engagement_date": "2026-05-15",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Canadian Tire Corp - Agentic Inspiration and Ideation for Business Platform Team #1",
+        "start_date": "2026-05-15",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "METROLINX",
+    "account_number": "1-1A19ZQZ",
+    "tpid": 13965913,
+    "last_engagement_date": "2026-05-14",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "EAI - METROLINX - Agent Solutions for Finance",
+        "start_date": "2026-05-14",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "METROLINX - AI - Design Session",
+        "start_date": "2026-02-03",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Industrielle Alliance",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-13",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Industrielle Alliance - InvestiA - Rep Productivity Agent Design Session",
+        "start_date": "2026-05-13",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Industrielle Alliance",
+    "account_number": "1+77RS+136",
+    "tpid": 2218124,
+    "last_engagement_date": "2026-05-12",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Industrielle Alliance - InvestiA - Rep Productivity Agent Envisioning",
+        "start_date": "2026-05-12",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "SCOTIABANK",
+    "account_number": "1N-104XI",
+    "tpid": 523435,
+    "last_engagement_date": "2026-05-06",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "SCOTIABANK - M365 Copilot Executive Session ",
+        "start_date": "2026-05-06",
+        "status": "Cancelled",
+        "format": "In-Person"
+      },
+      {
+        "name": "SCOTIABANK - Agent Day Scotiabank Retail Banking Operations - Leadership Team #1",
+        "start_date": "2026-03-03",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "METROLINX",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-04-15",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "METROLINX - AI Rapid Prototype II (follow up)",
+        "start_date": "2026-04-15",
+        "status": "Complete",
+        "format": "In-Person"
+      },
+      {
+        "name": "METROLINX - AI Rapid Prototype I (follow up)",
+        "start_date": "2026-02-25",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "THE MANUFACTURERS LIFE INSURANCE COMPANY USA",
+    "account_number": "1+77RS+243",
+    "tpid": 1312245,
+    "last_engagement_date": "2026-04-14",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "THE MANUFACTURERS LIFE INSURANCE COMPANY USA - Finance Regroup on Data Architecture",
+        "start_date": "2026-04-14",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Rogers Communications Inc",
+    "account_number": "1+77RS+210",
+    "tpid": 604393,
+    "last_engagement_date": "2026-04-08",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Rogers Communications Inc - Envisioning for The Future for Family Wireless",
+        "start_date": "2026-04-08",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Intact Financial Corporation",
+    "account_number": "1-SLBQEG",
+    "tpid": 6233410,
+    "last_engagement_date": "2026-04-01",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Intact Financial Corporation - Employee Self\u2011Serve Agent (follow up)",
+        "start_date": "2026-04-01",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Intact Financial Corporation - Driving Productivity with Copilot: High-Impact Use Cases, Self-Service Enablement, and Automation ",
+        "start_date": "2026-02-18",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Mccain Foods Ltd",
+    "account_number": "1+77RS+158",
+    "tpid": 1079125,
+    "last_engagement_date": "2026-03-26",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Mccain Foods Ltd - HR Envisioning",
+        "start_date": "2026-03-26",
+        "status": "TBR",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Equitable Bank",
+    "account_number": "1-141I78",
+    "tpid": 2803882,
+    "last_engagement_date": "2026-03-24",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Equitable Bank - IQ - Bringing 3 IQs (Workiq, FoundryIQ and FabricIQ) to one",
+        "start_date": "2026-03-24",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "SHARED SERVICES CANADA",
+    "account_number": "6-EHXJ5JK7J",
+    "tpid": 16920326,
+    "last_engagement_date": "2026-03-19",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "SHARED SERVICES CANADA - Agentic approaches for Project Management",
+        "start_date": "2026-03-19",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Canaccord Genuity",
+    "account_number": "1+78EZ+88",
+    "tpid": 1406071,
+    "last_engagement_date": "2026-03-18",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Canaccord Genuity - AI Architecture Design Session",
+        "start_date": "2026-03-18",
+        "status": "TBR",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Healthcare of Ontario Pension Plan",
+    "account_number": "11-V1DW",
+    "tpid": 1071537,
+    "last_engagement_date": "2026-03-17",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Healthcare of Ontario Pension Plan - Elevating Member Services w/Intelligent M365 Agents (follow up)",
+        "start_date": "2026-03-17",
+        "status": "TBR",
+        "format": "In-Person"
+      },
+      {
+        "name": "Healthcare of Ontario Pension Plan - LOB Agentic AI Day",
+        "start_date": "2026-01-27",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "FY26",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-03-09",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "FY26 - HUB Essentials",
+        "start_date": "2026-03-09",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "ONTARIO POWER GENERATION INC",
+    "account_number": "7-PWHESDMCU",
+    "tpid": 594995,
+    "last_engagement_date": "2026-02-05",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "ONTARIO POWER GENERATION INC - Atura's AI and Agents Day ",
+        "start_date": "2026-02-05",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "SUN LIFE ASSURANCE COMPANY OF CANADA",
+    "account_number": "1+77RS+234",
+    "tpid": 622476,
+    "last_engagement_date": "2026-01-28",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "SUN LIFE ASSURANCE COMPANY OF CANADA - AI Coaching Agent",
+        "start_date": "2026-01-28",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  }
+]

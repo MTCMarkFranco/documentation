@@ -1,0 +1,134 @@
+[
+  {
+    "customer_name": "University Health Network",
+    "account_number": "6-MCVR4EMH2",
+    "tpid": 20835883,
+    "last_engagement_date": "2026-07-08",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "University Health Network - Data Intelligence Hub",
+        "start_date": "2026-07-08",
+        "status": "Confirmed",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Innocap",
+    "account_number": "7-NCSIZCVJH",
+    "tpid": 104494446,
+    "last_engagement_date": "2026-06-16",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "Innocap - Data Quality for Portfolio Reporting (follow up)",
+        "start_date": "2026-06-16",
+        "status": "TBR",
+        "format": "Hybrid"
+      },
+      {
+        "name": "Innocap - Real time data analysis T+X - Github and Fabric Envisioning Session",
+        "start_date": "2026-03-31",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "BROOKFIELD ASSET MANAGEMENT",
+    "account_number": "9-3DUZEXFIN2",
+    "tpid": 86008218,
+    "last_engagement_date": "2026-06-10",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "BROOKFIELD ASSET MANAGEMENT - IT-in-a-box ",
+        "start_date": "2026-06-10",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "EAI",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-05-20",
+    "engagement_count": 2,
+    "engagements": [
+      {
+        "name": "EAI - Magna International - Microsoft Fabric for Finance: Rapid Prototype Day 2 (follow up)",
+        "start_date": "2026-05-20",
+        "status": "Complete",
+        "format": "Hybrid"
+      },
+      {
+        "name": "EAI - Magna International - Microsoft Fabric for Finance: Rapid Prototype Day 1 (follow up)",
+        "start_date": "2026-04-30",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Microsoft Canada",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-04-28",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Microsoft Canada - Hub Essentials - TOR ",
+        "start_date": "2026-04-28",
+        "status": "Complete",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Innocap",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-04-21",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Innocap - Real time data analysis T+X - Github and Fabric Design Session",
+        "start_date": "2026-04-21",
+        "status": "Cancelled",
+        "format": "In-Person"
+      }
+    ]
+  },
+  {
+    "customer_name": "Magna International",
+    "account_number": "1+77RS+152",
+    "tpid": 1276180,
+    "last_engagement_date": "2026-04-15",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "EAI - Magna International - Microsoft Fabric for Finance: Design Session",
+        "start_date": "2026-04-15",
+        "status": "Complete",
+        "format": "Hybrid"
+      }
+    ]
+  },
+  {
+    "customer_name": "Fabric Analyst in a Day Readiness",
+    "account_number": "N/A",
+    "tpid": null,
+    "last_engagement_date": "2026-03-11",
+    "engagement_count": 1,
+    "engagements": [
+      {
+        "name": "Fabric Analyst in a Day Readiness",
+        "start_date": "2026-03-11",
+        "status": "Complete",
+        "format": "Virtual"
+      }
+    ]
+  }
+]
